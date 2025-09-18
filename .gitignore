@@ -1,0 +1,21 @@
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Dépendances
+node_modules/
+vendor/
+
+# Logs
+*.log
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Python (si projet Python)
+__pycache__/
+*.pyc
+
