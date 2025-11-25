@@ -155,20 +155,17 @@ def assign_card():
 
 def _ask_pin_octets(message):
     """
-    Demande un PIN sous forme de 4 octets (décimaux), ex: 1 2 3 4
+    Demande un PIN sur 4 chiffres collés, ex: 1234
     Renvoie une liste de 4 entiers [b0, b1, b2, b3].
+    Chaque chiffre est converti en entier (ex: '1' -> 1).
     """
     while True:
-        raw = input(message + " (4 octets séparés par des espaces, ex: 1 2 3 4) : ")
-        parts = raw.strip().split()
-        if len(parts) != 4:
-            print("Veuillez entrer exactement 4 octets.")
+        raw = input(message + " (4 chiffres, ex: 1234) : ").strip()
+        if len(raw) != 4 or not raw.isdigit():
+            print("Veuillez entrer exactement 4 chiffres (ex: 1234).")
             continue
-        try:
-            bytes_pin = [int(x) & 0xFF for x in parts]
-        except ValueError:
-            print("Valeurs invalides, utilisez des nombres entiers.")
-            continue
+        # Chaque caractère est un chiffre : '1','2','3','4' -> [1,2,3,4]
+        bytes_pin = [int(ch) & 0xFF for ch in raw]
         return bytes_pin
 
 
