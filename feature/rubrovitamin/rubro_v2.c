@@ -26,7 +26,7 @@ uint8_t sw1, sw2;              // status word
 //======================================================================
 
 #define size_atr 0x6
-const char atr_str[size_atr] PROGMEM = "bourse";
+const char atr_str[size_atr] PROGMEM = "rubro";
 
 // Procédure qui renvoie l'ATR
 void atr(void)
@@ -54,9 +54,10 @@ void atr(void)
 //======================================================================
 
 #define size_ver 4
-const char ver_str[size_ver] PROGMEM = "1.00";
+const char ver_str[size_ver] PROGMEM = "2.00";
 
 // émission de la version
+// CLA = 0x81, INS = 0x00
 void version(void)
 {
     int i;
@@ -74,6 +75,7 @@ void version(void)
         sendbytet0(pgm_read_byte(ver_str + i));
     }
     sw1 = 0x90;
+    sw2 = 0x00;
 }
 
 
@@ -82,7 +84,7 @@ void version(void)
 //======================================================================
 
 // nombre maximal d'opérations par transaction
-#define max_ope     3
+#define max_ope     8
 // taille maximale totale des données échangées lors d'une transaction
 #define max_data    64
 // définition de l'état du buffer -- plein est une valeur aléatoire
@@ -181,7 +183,7 @@ unsigned char ee_perso[MAX_PERSO] EEMEM;
 
 
 //======================================================================
-// PIN / PUK + anti-rejoue
+// PIN / PUK + anti-rejoue + solde
 //======================================================================
 
 #define PIN_LEN      4
@@ -207,7 +209,10 @@ uint8_t ee_puk_tries EEMEM = PUK_TRY_MAX;
 // Compteur anti-rejoue (16 bits, little endian)
 uint16_t ee_ctr EEMEM = 0;
 
-// Flag RAM : PIN vérifié pour la session
+// Solde en centimes
+uint16_t ee_solde EEMEM = 0;
+
+// Flag RAM : PIN vérifié pour la prochaine opération sensible
 uint8_t pin_ok = 0;
 
 
@@ -253,9 +258,10 @@ void compute_puk_from_perso(uint8_t *perso, uint8_t len, uint8_t *puk_out)
 
 
 //======================================================================
-// intro_perso : perso + génération PUK + reset PIN par défaut
+// intro_perso : perso + génération PUK + reset PIN/PUK/ctr/solde
 //======================================================================
 
+// CLA = 0x81, INS = 0x01
 // APDU : 81 01 00 00 Lc [perso]
 void intro_perso(void)
 {
@@ -272,7 +278,8 @@ void intro_perso(void)
     };
     uint8_t pin_tries = PIN_TRY_MAX;
     uint8_t puk_tries = PUK_TRY_MAX;
-    uint16_t ctr0 = 0;  // compteur anti-rejoue remis à 0
+    uint16_t ctr0 = 0;      // compteur anti-rejoue remis à 0
+    uint16_t solde0 = 0;    // solde remis à 0
 
     if (p3 > MAX_PERSO)
     {
@@ -298,7 +305,8 @@ void intro_perso(void)
     //  - PUK
     //  - PIN par défaut
     //  - compteurs d'essais PIN / PUK
-    //  - compteur anti-rejoue
+    //  - compteur anti-rejoue = 0
+    //  - solde = 0
     engage(
         1,  &p3,               &ee_taille_perso,
         p3, perso,             ee_perso,
@@ -307,17 +315,20 @@ void intro_perso(void)
         1,  &pin_tries,        &ee_pin_tries,
         1,  &puk_tries,        &ee_puk_tries,
         2,  (uint8_t*)&ctr0,   (uint8_t*)&ee_ctr,
+        2,  (uint8_t*)&solde0, (uint8_t*)&ee_solde,
         0
     );
     valide();
 
-    // en RAM, on considère que le PIN n'est pas encore vérifié
+    // en RAM, pas de PIN vérifié
     pin_ok = 0;
 
     sw1 = 0x90;
+    sw2 = 0x00;
 }
 
 // lecture perso
+// CLA = 0x81, INS = 0x02
 // APDU : 81 02 00 00 Lc
 void lire_perso(void)
 {
@@ -337,11 +348,13 @@ void lire_perso(void)
         sendbytet0(eeprom_read_byte(ee_perso + i));
     }
     sw1 = 0x90;
+    sw2 = 0x00;
 }
 
 
 //======================================================================
 // PIN / PUK : vérification, changement, reset par PUK
+// (CLA = 0x82)
 //======================================================================
 
 uint8_t pin_est_bloque(void)
@@ -357,6 +370,7 @@ uint8_t puk_est_bloque(void)
 }
 
 // Vérification du PIN
+// CLA = 0x82, INS = 0x04
 // APDU : 82 04 00 00 04 [PIN(4 octets)]
 void verifier_pin(void)
 {
@@ -393,7 +407,7 @@ void verifier_pin(void)
 
     if (ok)
     {
-        pin_ok = 1;
+        pin_ok = 1;  // autorisation pour UNE prochaine opération
         eeprom_write_byte(&ee_pin_tries, PIN_TRY_MAX);
         sw1 = 0x90;
         sw2 = 0x00;
@@ -418,6 +432,7 @@ void verifier_pin(void)
 }
 
 // Changement de PIN (avec ancien PIN)
+// CLA = 0x82, INS = 0x05
 // APDU : 82 05 00 00 08 = [old PIN(4)][new PIN(4)]
 void changer_pin(void)
 {
@@ -483,13 +498,16 @@ void changer_pin(void)
     engage(PIN_LEN, new_pin, ee_pin, 0);
     valide();
 
-    pin_ok = 1;
+    // on peut considérer que le PIN est vérifié pour UNE op (changer_pin lui-même)
+    pin_ok = 0; // et on le consomme
+
     eeprom_write_byte(&ee_pin_tries, PIN_TRY_MAX);
     sw1 = 0x90;
     sw2 = 0x00;
 }
 
 // Reset du PIN avec le PUK
+// CLA = 0x82, INS = 0x06
 // APDU : 82 06 00 00 0A [PUK(6)][nouveau PIN(4)]
 void reset_pin_par_puk(void)
 {
@@ -561,7 +579,7 @@ void reset_pin_par_puk(void)
     valide();
     eeprom_write_byte(&ee_pin_tries, PIN_TRY_MAX);
     eeprom_write_byte(&ee_puk_tries, PUK_TRY_MAX);
-    pin_ok = 1;
+    pin_ok = 0;   // pas de PIN “ouvert” après, il faudra faire un VERIFY
 
     sw1 = 0x90;
     sw2 = 0x00;
@@ -603,20 +621,21 @@ uint8_t check_and_update_ctr(void)
 
 
 //======================================================================
-// Gestion du solde
+// Gestion du solde (CLA 0x82)
 //======================================================================
 
-uint16_t ee_solde EEMEM = 0;
-
 // lecture du solde
+// CLA = 0x82, INS = 0x01
 // APDU : 82 01 00 00 02
 void lire_solde(void)
 {
     uint16_t s;
 
-    // il faut être authentifié par PIN
+    // il faut être authentifié par PIN pour CETTE opération
     if (!check_pin_ok())
         return;
+    // on consomme le ticket PIN pour ne pas réutiliser l'authentification
+    pin_ok = 0;
 
     if (p3 != 2)
     {
@@ -633,15 +652,18 @@ void lire_solde(void)
 }
 
 // crédit
+// CLA = 0x82, INS = 0x02
 // APDU : 82 02 P1 P2 02 [montant LSB][montant MSB]
 void credit(void)
 {
     uint16_t s;
     uint16_t c;
 
-    // PIN obligatoire
+    // PIN obligatoire pour CETTE opération
     if (!check_pin_ok())
         return;
+    // on consomme l'autorisation PIN
+    pin_ok = 0;
 
     // anti-rejoue
     if (!check_and_update_ctr())
@@ -671,15 +693,18 @@ void credit(void)
 }
 
 // débit
+// CLA = 0x82, INS = 0x03
 // APDU : 82 03 P1 P2 02 [montant LSB][montant MSB]
 void debit(void)
 {
     uint16_t s;
     uint16_t d;
 
-    // PIN obligatoire
+    // PIN obligatoire pour CETTE opération
     if (!check_pin_ok())
         return;
+    // on consomme l'autorisation PIN
+    pin_ok = 0;
 
     // anti-rejoue
     if (!check_and_update_ctr())
@@ -709,6 +734,7 @@ void debit(void)
 }
 
 // Lecture du compteur anti-rejoue
+// CLA = 0x82, INS = 0x07
 // APDU : 82 07 00 00 02
 void lire_compteur(void)
 {
