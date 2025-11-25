@@ -9,14 +9,14 @@
 # $ make fuses
 
 # nom du fichier principal du projet
-NAME 	= bourse
+NAME 	= rubro
 #nom du fichier programme
 PROGNAME = $(NAME).hex
 # nom du fichier eeprom
 EENAME = $(NAME).eep
 
 # processeur cible
-PROC 	= -mmcu=atmega328
+PROC 	= -mmcu=atmega328p
 AVR	= avr5
 
 # nom du compilateur
