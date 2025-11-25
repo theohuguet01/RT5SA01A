@@ -73,25 +73,25 @@ io.o: io.c
 progcarte:
 	echo "Programmation de la carte"
 	@if [ -e /dev/ttyACM0 ]; then\
-		avrdude -c avrisp -p m328 -P /dev/ttyACM0 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
+		avrdude -c avrisp -p m328p -P /dev/ttyACM0 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
 	@if [ -e /dev/ttyACM1 ]; then\
-		avrdude -c avrisp -p m328 -P /dev/ttyACM1 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
+		avrdude -c avrisp -p m328p -P /dev/ttyACM1 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
 	@if [ -e /dev/ttyUSB0 ]; then\
-		avrdude -c avrisp -p m328 -P /dev/ttyUSB0 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
+		avrdude -c avrisp -p m328p -P /dev/ttyUSB0 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
 	@if [ -e /dev/ttyUSB1 ]; then\
-		avrdude -c avrisp -p m328 -P /dev/ttyUSB1 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
+		avrdude -c avrisp -p m328p -P /dev/ttyUSB1 -b 19200 -U flash:w:"./$(PROGNAME)":a -U eeprom:w:"./$(EENAME)":a; fi
 
 
 fuses:
 	echo "Programmation des fusibles"
 	@if [ -e /dev/ttyACM0 ]; then\
-		avrdude -c avrisp -p m328 -b 19200 -P /dev/ttyACM0 -U efuse:w:0xff:m  -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
+		avrdude -c avrisp -p m328p -b 19200 -P /dev/ttyACM0 -U efuse:w:0xff:m  -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
 	@if [ -e /dev/ttyACM1 ]; then\
-		avrdude -c avrisp -p m328 -b 19200 -P /dev/ttyACM1 -U efuse:w:0xff:m -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
+		avrdude -c avrisp -p m328p -b 19200 -P /dev/ttyACM1 -U efuse:w:0xff:m -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
 	@if [ -e /dev/ttyUSB0 ]; then\
-		avrdude -c avrisp -p m328 -b 19200 -P /dev/ttyUSB0 -U efuse:w:0xff:m -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
+		avrdude -c avrisp -p m328p -b 19200 -P /dev/ttyUSB0 -U efuse:w:0xff:m -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
 	@if [ -e /dev/ttyUSB1 ]; then\
-		avrdude -c avrisp -p m328 -b 19200 -P /dev/ttyUSB1 -U efuse:w:0xff:m -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
+		avrdude -c avrisp -p m328p -b 19200 -P /dev/ttyUSB1 -U efuse:w:0xff:m -U efuse:w:0xff:m -U hfuse:w:0xd9:m; fi
 
 # commande pour lire les fusibles :
 # pour écrire sur stdout, filename est "-"
