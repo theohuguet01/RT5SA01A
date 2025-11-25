@@ -330,7 +330,7 @@ void debit(void)
     d |= (uint16_t)recbytet0();
 
     // lecture du solde actuel
-    s = eeprom_read_word(&ee_solde);.
+    s = eeprom_read_word(&ee_solde);
 
     // solde insuffisant
     if (d > s) {

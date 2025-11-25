@@ -9,7 +9,7 @@
 # $ make fuses
 
 # nom du fichier principal du projet
-NAME 	= rubro
+NAME 	= rubro_v2
 #nom du fichier programme
 PROGNAME = $(NAME).hex
 # nom du fichier eeprom
