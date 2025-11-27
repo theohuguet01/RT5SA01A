@@ -13,10 +13,10 @@ from decimal import Decimal
 # =========================
 
 DB_CONFIG = {
-    "host": "localhost",
+    "host": "172.20.10.3",
     "port": 3306,
-    "user": "rodelika",
-    "password": "rodelika",
+    "user": "rodelika",      
+    "password": "rodelika",   
     "database": "carote_electronique",
 }
 
