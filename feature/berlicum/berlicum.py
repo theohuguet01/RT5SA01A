@@ -71,11 +71,12 @@ def print_hello_message():
 
 
 def print_menu():
-    print(" 1 - Afficher la version de carte ")
-    print(" 2 - Afficher les données perso de la carte ")
-    print(" 3 - Consulter + transférer les bonus BDD -> carte ")
-    print(" 4 - Consulter le solde de la carte ")
-    print(" 5 - Quitter ")
+    print(" 1 - Afficher mes informations")
+    print(" 2 - Consulter mes bonus")
+    print(" 3 - Transférer mes bonus sur ma carte")
+    print(" 4 - Consulter le crédit disponible sur ma carte")
+    print(" 5 - Recharger avec ma carte bancaire")
+    print(" 6 - Quitter")
 
 
 # =========================
@@ -147,7 +148,7 @@ def _read_perso_raw():
 
 
 def print_data():
-    """Affiche les données perso de la carte."""
+    """Affiche les données perso de la carte (debug)."""
     perso = _read_perso_raw()
     if perso is None:
         return
@@ -180,9 +181,35 @@ def get_student_number_from_card():
         print("Erreur : numéro étudiant invalide dans la perso :", raw_num)
         return None
 
-    # On force le format CHAR(8) comme dans la BDD (00000001, 00000002, ...)
     etu_num = raw_num.zfill(8)
     return etu_num
+
+
+def get_student_info_from_card():
+    """
+    Retourne (Num_Etudiant CHAR(8), Nom, Prenom) à partir de la carte,
+    ou (None, None, None) en cas d’erreur.
+    """
+    perso = _read_perso_raw()
+    if perso is None or perso == "":
+        print("Erreur : carte non attribuée ou perso illisible.")
+        return None, None, None
+
+    parts = perso.split(";")
+    if len(parts) < 3:
+        print("Erreur : format perso inattendu :", perso)
+        return None, None, None
+
+    raw_num = parts[0].strip()
+    nom = parts[1].strip()
+    prenom = parts[2].strip()
+
+    if not raw_num.isdigit():
+        print("Erreur : numéro étudiant invalide dans la perso :", raw_num)
+        return None, None, None
+
+    etu_num = raw_num.zfill(8)
+    return etu_num, nom, prenom
 
 
 def _ask_pin_octets(message):
@@ -359,7 +386,7 @@ def credit_card_amount(euros_amount):
 
 
 # =========================
-#  FONCTIONS BDD (basées sur Transactions)
+#  FONCTIONS BDD (Transactions)
 # =========================
 
 def get_bonus_disponible(etu_num):
@@ -413,6 +440,23 @@ def marquer_bonus_transfere(etu_num):
     return nb
 
 
+def debiter_compte_recharge(etu_num, montant):
+    """
+    Crédite le compte en BDD (fonds propres) via la procédure CrediterCompte.
+    Commentaire : 'Recharge CB Berlicum'.
+    """
+    try:
+        cursor = cnx.cursor()
+        cursor.callproc("CrediterCompte", [etu_num, float(montant), "Recharge CB Berlicum"])
+        cnx.commit()
+        cursor.close()
+        print(f"Compte BDD crédité de {montant:.2f} € pour {etu_num}.")
+        return True
+    except mysql.connector.Error as e:
+        print("ERREUR : la carte a été créditée, mais le crédit BDD a échoué :", e)
+        return False
+
+
 # =========================
 #  LOGIQUE BERLICUM
 # =========================
@@ -457,6 +501,73 @@ def consulter_et_transferer_bonus():
 
 
 # =========================
+#  NOUVELLES FONCTIONS MENU ÉTUDIANT
+# =========================
+
+def afficher_mes_informations():
+    """Option 1 : affiche Num_Etudiant, Nom, Prénom à partir de la carte."""
+    print("=== Mes informations ===")
+    etu_num, nom, prenom = get_student_info_from_card()
+    if etu_num is None:
+        return
+    print(f"Numéro étudiant : {etu_num}")
+    print(f"Nom            : {nom}")
+    print(f"Prénom         : {prenom}")
+
+
+def consulter_mes_bonus():
+    """Option 2 : affiche les bonus disponibles en BDD pour l'étudiant de la carte."""
+    print("=== Mes bonus disponibles ===")
+    etu_num = get_student_number_from_card()
+    if etu_num is None:
+        return
+    montant = get_bonus_disponible(etu_num)
+    print(f"Bonus disponibles pour {etu_num} : {montant:.2f} €")
+
+
+def recharger_avec_cb():
+    """
+    Option 5 : Recharger la carte avec une 'carte bancaire'.
+    Ici on simule juste la partie encaissement en demandant le montant.
+    Logique :
+      - lit Num_Etudiant sur la carte
+      - demande un montant
+      - crédite la carte (APDU)
+      - crédite la BDD via CrediterCompte
+    """
+    print("=== Recharge par carte bancaire ===")
+    etu_num = get_student_number_from_card()
+    if etu_num is None:
+        return
+
+    print(f"Étudiant détecté : {etu_num}")
+    montant_str = input("Montant à recharger (en euros, ex: 5.00) : ").replace(",", ".").strip()
+    try:
+        montant = Decimal(montant_str)
+    except Exception:
+        print("Montant invalide.")
+        return
+
+    if montant <= 0:
+        print("Le montant doit être strictement positif.")
+        return
+
+    print(f"Vous allez recharger {montant:.2f} € sur la carte et le compte BDD.")
+    confirm = input("Confirmer ? (o/n) : ").strip().lower()
+    if confirm not in ("o", "oui", "y", "yes"):
+        print("Recharge annulée.")
+        return
+
+    # 1) Créditer la carte
+    if not credit_card_amount(montant):
+        print("Recharge annulée suite à une erreur de crédit sur la carte.")
+        return
+
+    # 2) Créditer la BDD
+    debiter_compte_recharge(etu_num, montant)
+
+
+# =========================
 #  MAIN LOOP
 # =========================
 
@@ -474,14 +585,16 @@ def main():
             continue
 
         if cmd == 1:
-            print_version()
+            afficher_mes_informations()
         elif cmd == 2:
-            print_data()
+            consulter_mes_bonus()
         elif cmd == 3:
             consulter_et_transferer_bonus()
         elif cmd == 4:
             read_sold()
         elif cmd == 5:
+            recharger_avec_cb()
+        elif cmd == 6:
             print("Au revoir.")
             break
         else:
