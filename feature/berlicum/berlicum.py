@@ -15,8 +15,8 @@ from decimal import Decimal
 DB_CONFIG = {
     "host": "172.20.10.3",
     "port": 3306,
-    "user": "rodelika",      
-    "password": "rodelika",   
+    "user": "rodelika",
+    "password": "rodelika",
     "database": "carote_electronique",
 }
 
@@ -159,9 +159,9 @@ def print_data():
 
 def get_student_number_from_card():
     """
-    Récupère le numéro d'étudiant (etu_num) à partir de la perso.
+    Récupère le Num_Etudiant à partir de la perso.
     Format attendu : 'num;nom;prenom'
-    Retourne un int ou None.
+    Retourne une chaîne CHAR(8) (zéro-pad, ex: '00000001') ou None.
     """
     perso = _read_perso_raw()
     if perso is None:
@@ -175,12 +175,14 @@ def get_student_number_from_card():
         print("Erreur : format perso inattendu :", perso)
         return None
 
-    try:
-        etu_num = int(parts[0])
-        return etu_num
-    except ValueError:
-        print("Erreur : numéro étudiant invalide dans la perso :", parts[0])
+    raw_num = parts[0].strip()
+    if not raw_num.isdigit():
+        print("Erreur : numéro étudiant invalide dans la perso :", raw_num)
         return None
+
+    # On force le format CHAR(8) comme dans la BDD (00000001, 00000002, ...)
+    etu_num = raw_num.zfill(8)
+    return etu_num
 
 
 def _ask_pin_octets(message):
@@ -357,41 +359,51 @@ def credit_card_amount(euros_amount):
 
 
 # =========================
-#  FONCTIONS BDD (PurpleDragon)
+#  FONCTIONS BDD (basées sur Transactions)
 # =========================
 
 def get_bonus_disponible(etu_num):
     """
-    Retourne le total des bonus encore non transférés pour l'étudiant.
-      SELECT SUM(opr_montant)
-      FROM Compte
-      WHERE etu_num = ? AND type_opeartion='Bonus'
+    Retourne le total des bonus non transférés pour l’étudiant (Num_Etudiant CHAR(8)).
+    On utilise la table Transactions :
+
+      - Type = 'CREDIT'
+      - Commentaire commence par 'Bonus'
+      - Commentaire ne contient pas encore 'transféré'
     """
     sql = """
-        SELECT COALESCE(SUM(opr_montant), 0)
-        FROM Compte
-        WHERE etu_num = %s
-          AND type_opeartion = 'Bonus'
+        SELECT COALESCE(SUM(Montant), 0)
+        FROM Transactions
+        WHERE Num_Etudiant = %s
+          AND Type = 'CREDIT'
+          AND Commentaire LIKE 'Bonus%%'
+          AND Commentaire NOT LIKE '%%transféré%%'
     """
     cursor = cnx.cursor()
     cursor.execute(sql, (etu_num,))
     row = cursor.fetchone()
     cursor.close()
+
     if row is None or row[0] is None:
         return Decimal("0.00")
+
     return Decimal(str(row[0]))
 
 
 def marquer_bonus_transfere(etu_num):
     """
-    Passe tous les bonus 'Bonus' de cet étudiant en 'Bonus transféré'.
-    Retourne le nombre de lignes modifiées.
+    Marque tous les bonus non transférés de cet étudiant comme 'transférés'
+    en suffixant le commentaire.
+
+    On reste dans la table Transactions (aucun changement de schéma).
     """
     sql = """
-        UPDATE Compte
-        SET type_opeartion = 'Bonus transféré'
-        WHERE etu_num = %s
-          AND type_opeartion = 'Bonus'
+        UPDATE Transactions
+        SET Commentaire = CONCAT(Commentaire, ' (transféré)')
+        WHERE Num_Etudiant = %s
+          AND Type = 'CREDIT'
+          AND Commentaire LIKE 'Bonus%%'
+          AND Commentaire NOT LIKE '%%transféré%%'
     """
     cursor = cnx.cursor()
     cursor.execute(sql, (etu_num,))
@@ -408,10 +420,11 @@ def marquer_bonus_transfere(etu_num):
 def consulter_et_transferer_bonus():
     """
     - Lit le numéro étudiant sur la carte
-    - Calcule le total des bonus disponibles en BDD (type_opeartion='Bonus')
+    - Calcule le total des bonus disponibles en BDD
+      (Transactions.Type='CREDIT' & Commentaire 'Bonus...' pas encore 'transféré')
     - Affiche ce montant
     - Propose de le transférer sur la carte
-    - Si OK : crédite la carte puis met à jour la BDD (Bonus -> Bonus transféré)
+    - Si OK : crédite la carte puis marque ces bonus comme transférés en BDD
     """
     print("=== Consultation / Transfert des bonus BDD -> carte ===")
 
@@ -438,7 +451,7 @@ def consulter_et_transferer_bonus():
         print("Transfert annulé suite à une erreur de crédit sur la carte.")
         return
 
-    # Mise à jour BDD : Bonus -> Bonus transféré
+    # Mise à jour BDD : marquer bonus comme transférés
     nb = marquer_bonus_transfere(etu_num)
     print(f"Bonus transférés en base de données (lignes mises à jour : {nb}).")
 
