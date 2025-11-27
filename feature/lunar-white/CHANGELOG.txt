@@ -1,0 +1,122 @@
+📋 RÉSUMÉ DES AMÉLIORATIONS - Machine à Café Lunar White
+========================================================
+
+✅ PROBLÈMES RÉSOLUS
+--------------------
+
+1. ❌ "Boisson invalide" → ✅ Conversion automatique ID boisson (string → int)
+2. ❌ Solde non débité → ✅ Vérification ID + PIN correcte
+3. ❌ Déconnexion trop rapide → ✅ Surveillance toutes les 5 secondes + 3 erreurs requises
+4. ❌ Son qui grésille → ✅ Phases progressives avec oscillateurs sine continus
+
+🔧 PARAMÈTRES DE DÉTECTION
+---------------------------
+
+Détection de carte (attente) : 3 secondes
+Surveillance déconnexion : 5 secondes
+Erreurs consécutives requises : 3 (évite faux positifs)
+
+💡 COMMENT ÇA MARCHE
+--------------------
+
+1. DÉTECTION AUTOMATIQUE
+   - Vérifie toutes les 3 secondes si une carte est présente
+   - Dès qu'une carte est détectée → Affiche le panneau PIN
+   - Joue un son de carte insérée
+
+2. SURVEILLANCE DE DÉCONNEXION
+   - Une fois connecté, vérifie toutes les 5 secondes
+   - Si 3 erreurs consécutives → Considère la carte retirée
+   - Si OK → Réinitialise le compteur d'erreurs
+
+3. PROTECTION PENDANT ACHAT
+   - Pendant la préparation (isProcessing=true), pas de vérification
+   - Évite les interruptions pendant le service
+
+🎵 AMÉLIORATION DU SON
+----------------------
+
+AVANT :
+- Sons brefs et répétés toutes les 80-100ms
+- Cause du grésillement audible
+
+APRÈS :
+- 3 phases de sons continus et progressifs :
+  * Phase 1 (1s) : 80-120 Hz (grave) - Démarrage
+  * Phase 2 (1.5s) : 150-200 Hz (moyen) - Percolation
+  * Phase 3 (1.5s) : 200-280 Hz (aigu) - Fin
+- Oscillateurs sine avec rampes progressives
+- Transitions douces sans coupures
+
+🧪 TESTS RECOMMANDÉS
+--------------------
+
+MODE DÉMO (demo_mode.py) :
+1. Lancer : python3 demo_mode.py
+2. Attendre la détection automatique (3 sec max)
+3. Entrer PIN : 1234
+4. Acheter 7 boissons (épuise le solde de 1.50€)
+5. 8ème tentative → Vérifier message "solde insuffisant"
+6. Retirer la carte (simuler) → Vérifier retour auto
+
+MODE RÉEL (app.py) :
+1. Insérer la carte physique
+2. Attendre max 3 secondes
+3. Entrer votre PIN
+4. Acheter une boisson
+5. Pendant la préparation (4s), NE PAS retirer la carte
+6. Après achat, retirer la carte → Vérifier détection
+
+⏱️ TIMELINE D'UN ACHAT
+-----------------------
+
+T+0s    : Sélection de la boisson
+T+1s    : Début préparation (isProcessing=true)
+T+1-5s  : Animation + sons (4 secondes)
+          → Surveillance déconnexion DÉSACTIVÉE
+T+5s    : Boisson servie (isProcessing=false)
+          → Surveillance déconnexion RÉACTIVÉE
+
+🔍 DEBUGGING
+------------
+
+Si problème de déconnexion :
+1. Ouvrir Console développeur (F12)
+2. Regarder les appels /api/check_card
+3. Vérifier si erreurs 500 ou timeout
+4. Ajuster le délai dans startDisconnectionMonitoring()
+
+Si solde non débité :
+1. Vérifier Console : "boisson_id: X"
+2. Vérifier que X est bien 1, 2 ou 3
+3. Vérifier les logs : log.txt ou log_demo.txt
+
+📝 FICHIERS MODIFIÉS
+--------------------
+
+✓ static/app.js
+  - Ajout consecutiveErrors
+  - Polling 3s (détection) / 5s (surveillance)
+  - Sons sans grésillement
+  - Vérification solde dans selectDrink()
+
+✓ app.py
+  - Conversion int(boisson_id)
+  - Meilleure gestion erreurs
+
+✓ demo_mode.py
+  - Même logique que app.py
+  - Carte simulée en mémoire
+
+✓ templates/index.html
+  - Panneau caché au démarrage
+  - Machine centrée
+  - Animations améliorées
+
+🎯 RÉSULTAT
+-----------
+
+Une machine à café fluide, stable, avec détection automatique
+et protection contre les fausses déconnexions !
+
+Bon café ! ☕✨
