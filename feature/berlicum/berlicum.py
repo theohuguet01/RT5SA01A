@@ -1,20 +1,44 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import smartcard.System as scardsys
 import smartcard.util as scardutil
 import smartcard.Exceptions as scardexcp
 
-conn_reader = None
+import mysql.connector
+from decimal import Decimal
 
+# =========================
+#  CONFIG BDD
+# =========================
+
+DB_CONFIG = {
+    "host": "localhost",
+    "port": 3306,
+    "user": "rodelika",
+    "password": "rodelika",
+    "database": "carote_electronique",
+}
+
+cnx = None          # connexion MySQL
+conn_reader = None  # connexion lecteur de carte
+
+
+# =========================
+#  INIT SMARTCARD / BDD
+# =========================
 
 def init_smart_card():
+    """Initialise la connexion au premier lecteur de carte disponible."""
     try:
         lst_readers = scardsys.readers()
     except scardexcp.Exceptions as e:
-        print(e)
+        print("Erreur lecteurs :", e)
         return
 
     if len(lst_readers) < 1:
         print(" Pas de lecteur de carte connecté !")
-        exit()
+        exit(1)
 
     try:
         global conn_reader
@@ -23,28 +47,43 @@ def init_smart_card():
         print("ATR : ", scardutil.toHexString(conn_reader.getATR()))
     except scardexcp.NoCardException as e:
         print(" Pas de carte dans le lecteur : ", e)
-        exit()
-    return
+        exit(1)
 
+
+def init_db():
+    """Initialise la connexion MySQL."""
+    global cnx
+    try:
+        cnx = mysql.connector.connect(**DB_CONFIG)
+    except mysql.connector.Error as err:
+        print("Erreur de connexion MySQL :", err)
+        exit(1)
+
+
+# =========================
+#  UI
+# =========================
 
 def print_hello_message():
     print("---------------------------------------------")
-    print("-- Logiciel de personnalisation : Lubiana --")
+    print("-- Borne de recharge : Berlicum            --")
     print("---------------------------------------------")
 
 
 def print_menu():
     print(" 1 - Afficher la version de carte ")
-    print(" 2 - Afficher les données de la carte ")
-    print(" 3 - Attribuer la carte ")
-    print(" 4 - Mettre le solde initial ")
-    print(" 5 - Consulter le solde ")
-    print(" 6 - Changer le code PIN ")
-    print(" 7 - Quitter ")
+    print(" 2 - Afficher les données perso de la carte ")
+    print(" 3 - Consulter + transférer les bonus BDD -> carte ")
+    print(" 4 - Consulter le solde de la carte ")
+    print(" 5 - Quitter ")
 
+
+# =========================
+#  FONCTIONS CARTE
+# =========================
 
 def print_version():
-    # Version : CLA=0x81, INS=0x00, P3=4 (taille de "2.00")
+    """Lecture de la version de la carte (comme Lubiana)."""
     apdu = [0x81, 0x00, 0x00, 0x00, 0x04]
     try:
         data, sw1, sw2 = conn_reader.transmit(apdu)
@@ -68,105 +107,93 @@ def print_version():
         )
         return
 
-    # la carte envoie d’abord INS (0x00), puis "2.00"
     s = "".join(chr(e) for e in data)
     print("sw1 : 0x%02X | sw2 : 0x%02X | version %s" % (sw1, sw2, s))
 
 
-# =========================
-#  FONCTION 2 - données perso
-# =========================
-
-def print_data():
+def _read_perso_raw():
     """
-    Affiche les données de personnalisation (perso).
-    Si la carte n’est pas attribuée (taille 0) → message explicite.
+    Lecture des données perso brutes (sans affichage).
+    Retourne la chaîne "num;nom;prenom" ou None.
     """
-    # 1er essai avec une longueur "guess"
     apdu = [0x81, 0x02, 0x00, 0x00, 0x05]
-    data, sw1, sw2 = conn_reader.transmit(apdu)
+    try:
+        data, sw1, sw2 = conn_reader.transmit(apdu)
+    except scardexcp.CardConnectionException as e:
+        print("Erreur lecture perso :", e)
+        return None
 
     if sw1 == 0x6C:
-        # sw2 = taille réelle des données perso (peut être 0 !)
         apdu[4] = sw2
-        data, sw1, sw2 = conn_reader.transmit(apdu)
+        try:
+            data, sw1, sw2 = conn_reader.transmit(apdu)
+        except scardexcp.CardConnectionException as e:
+            print("Erreur lecture perso :", e)
+            return None
 
     if sw1 != 0x90 or sw2 != 0x00:
         print("sw1 : 0x%02X | sw2 : 0x%02X | Erreur lecture données" % (sw1, sw2))
-        return
+        return None
 
-    # data[0] = INS (0x02), puis la perso
     if data and len(data) > 1:
         perso_bytes = data[1:]
     else:
         perso_bytes = []
 
     if not perso_bytes:
-        print("sw1 : 0x%02X | sw2 : 0x%02X | Carte non attribuée (aucune donnée)."
-              % (sw1, sw2))
-    else:
-        s = "".join(chr(e) for e in perso_bytes)
-        print("sw1 : 0x%02X | sw2 : 0x%02X | Données %s" % (sw1, sw2, s))
+        return ""
+
+    return "".join(chr(e) for e in perso_bytes)
 
 
-# =========================
-#  PERSO
-# =========================
-
-def assign_card():
-    # intro_perso() : APDU 81 01 00 00 Lc [perso]
-    apdu = [0x81, 0x01, 0x00, 0x00]
-
-    # Lubiana : on attribue la carte à un étudiant (num, nom, prénom)
-    num = input("Numéro d'étudiant : ")
-    nom = input("Nom : ")
-    prenom = input("Prénom : ")
-
-    # format simple : "num;nom;prenom"
-    infos = f"{num};{nom};{prenom}"
-    length = len(infos)
-
-    if length > 255:
-        print("Chaîne de personnalisation trop longue.")
+def print_data():
+    """Affiche les données perso de la carte."""
+    perso = _read_perso_raw()
+    if perso is None:
         return
+    if perso == "":
+        print("Carte non attribuée (aucune donnée).")
+    else:
+        print("Données perso :", perso)
 
-    apdu.append(length)
-    for c in infos:
-        apdu.append(ord(c))
+
+def get_student_number_from_card():
+    """
+    Récupère le numéro d'étudiant (etu_num) à partir de la perso.
+    Format attendu : 'num;nom;prenom'
+    Retourne un int ou None.
+    """
+    perso = _read_perso_raw()
+    if perso is None:
+        return None
+    if perso == "":
+        print("Erreur : carte non attribuée (pas de perso).")
+        return None
+
+    parts = perso.split(";")
+    if len(parts) < 1:
+        print("Erreur : format perso inattendu :", perso)
+        return None
 
     try:
-        data, sw1, sw2 = conn_reader.transmit(apdu)
-        print("sw1 : 0x%02X | sw2 : 0x%02X" % (sw1, sw2))
-    except scardexcp.CardConnectionException as e:
-        print("error : ", e)
-        return
+        etu_num = int(parts[0])
+        return etu_num
+    except ValueError:
+        print("Erreur : numéro étudiant invalide dans la perso :", parts[0])
+        return None
 
-    if sw1 == 0x90 and sw2 == 0x00:
-        print("Carte personnalisée avec succès.")
-    elif sw1 == 0x6C:
-        print("Taille incorrecte, la carte attend %d octets." % sw2)
-    else:
-        print("Erreur lors de la personnalisation de la carte.")
-
-
-# =========================
-#  PIN / COMPTEUR / SOLDE
-# =========================
 
 def _ask_pin_octets(message):
     """
     Demande un PIN sur 4 chiffres collés, ex: 1234
     Renvoie une liste de 4 entiers [b0, b1, b2, b3].
-    Chaque chiffre est converti en entier (ex: '1' -> 1).
     """
     while True:
         raw = input(message + " (4 chiffres, ex: 1234) : ").strip()
         if len(raw) != 4 or not raw.isdigit():
             print("Veuillez entrer exactement 4 chiffres (ex: 1234).")
             continue
-        # Chaque caractère est un chiffre : '1','2','3','4' -> [1,2,3,4]
-        bytes_pin = [int(ch) & 0xFF for ch in raw]
-        return bytes_pin
+        return [int(ch) & 0xFF for ch in raw]
 
 
 def verify_pin_interactive():
@@ -205,7 +232,7 @@ def read_counter():
     """
     Lecture du compteur anti-rejoue.
     APDU : 82 07 00 00 02
-    Renvoie le compteur (int) ou None en cas d'erreur.
+    Renvoie le compteur (int) ou None.
     """
     apdu = [0x82, 0x07, 0x00, 0x00, 0x02]
     try:
@@ -219,7 +246,6 @@ def read_counter():
         print("Erreur lors de la lecture du compteur.")
         return None
 
-    # Little-endian : LSB puis MSB
     ctr = int(data[0]) | (int(data[1]) << 8)
     print("Compteur actuel : %d" % ctr)
     return ctr
@@ -227,8 +253,7 @@ def read_counter():
 
 def _read_sold_core():
     """
-    Lecture basse-niveau du solde, en supposant que le PIN vient
-    d’être vérifié côté carte (pin_ok=1).
+    Lecture bas niveau du solde, en supposant PIN déjà vérifié.
     APDU : 82 01 00 00 02
     Retourne le solde en centimes (int) ou None.
     """
@@ -251,100 +276,13 @@ def _read_sold_core():
         print("Données de solde invalides ou manquantes.")
         return None
 
-    # Little-endian : LSB puis MSB
     cents = int(data[0]) | (int(data[1]) << 8)
     return cents
 
 
-# =========================
-#  FONCTION 4 - solde initial
-# =========================
-
-def assign_inital_sold():
-    """
-    Créditer 1.00 € sur la carte, seulement si solde actuel = 0.
-    - Vérifie d'abord le PIN pour lire le solde
-    - Si solde > 0 → on refuse le crédit initial
-    - Si solde = 0 → on re-vérifie le PIN, lit le compteur, puis crédit 1.00 €
-    """
-    print("=== Mise du solde initial à 1.00 € ===")
-
-    # 1) PIN pour lecture solde
-    print("Vérification PIN pour lecture du solde...")
-    if not verify_pin_interactive():
-        print("Impossible de vérifier le solde : PIN non vérifié.")
-        return
-
-    # 2) Lecture du solde (consomme le ticket PIN côté carte)
-    cents = _read_sold_core()
-    if cents is None:
-        print("Impossible de vérifier si la carte a déjà un solde.")
-        return
-
-    if cents > 0:
-        euros = cents / 100.0
-        print(
-            f"Carte déjà attribuée / initialisée (solde actuel = {euros:.2f} €). "
-            "Crédit initial non appliqué."
-        )
-        return
-
-    print("Solde actuel = 0.00 €, initialisation possible.")
-
-    # 3) PIN à nouveau pour l’opération de crédit (la carte consomme le PIN à chaque op sensible)
-    print("Vérification PIN pour le crédit initial...")
-    if not verify_pin_interactive():
-        print("Impossible de créditer : PIN non vérifié.")
-        return
-
-    # 4) Lecture du compteur anti-rejoue
-    ctr = read_counter()
-    if ctr is None:
-        print("Impossible de créditer : compteur indisponible.")
-        return
-
-    # 5) Crédit de 1.00 € = 100 centimes
-    montant = 100
-    montant_lsb = montant & 0xFF
-    montant_msb = (montant >> 8) & 0xFF
-
-    p1 = ctr & 0xFF          # LSB compteur
-    p2 = (ctr >> 8) & 0xFF   # MSB compteur
-
-    # APDU : 82 02 P1 P2 02 [montant_LSB][montant_MSB]
-    apdu = [0x82, 0x02, p1, p2, 0x02, montant_lsb, montant_msb]
-
-    try:
-        data, sw1, sw2 = conn_reader.transmit(apdu)
-        print("Crédit - sw1 : 0x%02X | sw2 : 0x%02X" % (sw1, sw2))
-    except scardexcp.CardConnectionException as e:
-        print("error : ", e)
-        return
-
-    if sw1 == 0x90 and sw2 == 0x00:
-        print("Solde initial crédité : 1.00 €")
-    elif sw1 == 0x61 and sw2 == 0x00:
-        print("Capacité maximale de rechargement dépassée.")
-    elif sw1 == 0x69 and sw2 == 0x82:
-        print("Statut de sécurité non satisfait (PIN non vérifié côté carte).")
-    elif sw1 == 0x69 and sw2 == 0x84:
-        print("Erreur anti-rejoue (compteur invalide).")
-    elif sw1 == 0x6C:
-        print("Erreur de longueur (la carte attend %d octets)." % sw2)
-    else:
-        print("Erreur lors de la mise du solde initial.")
-
-
-# =========================
-#  FONCTION 5 - consultation solde
-# =========================
-
 def read_sold():
-    """
-    Consultation du solde : on vérifie le PIN à chaque fois,
-    puis on lit le solde via _read_sold_core().
-    """
-    print("=== Consultation du solde ===")
+    """Consultation du solde de la carte (avec vérif PIN)."""
+    print("=== Consultation du solde carte ===")
     if not verify_pin_interactive():
         print("Impossible de lire le solde : PIN non vérifié.")
         return
@@ -354,53 +292,166 @@ def read_sold():
         return
 
     euros = cents / 100.0
-    print("Solde disponible : %.2f €" % euros)
+    print("Solde disponible sur la carte : %.2f €" % euros)
 
 
-# =========================
-#  Changement de PIN
-# =========================
-
-def change_pin():
+def credit_card_amount(euros_amount):
     """
-    Changer le code PIN :
-    APDU : 82 05 00 00 08 [ancien PIN(4)][nouveau PIN(4)]
+    Crédite la carte du montant 'euros_amount' (Decimal ou float).
+    - Vérifie le PIN
+    - Lit le compteur
+    - APDU 82 02 P1 P2 02 [montant_LSB][montant_MSB]
     """
-    print("=== Changement de PIN ===")
-    # Saisie de l'ancien et du nouveau PIN
-    old_pin = _ask_pin_octets("Ancien PIN")
-    new_pin = _ask_pin_octets("Nouveau PIN")
+    print("=== Crédit de la carte ===")
 
-    apdu = [0x82, 0x05, 0x00, 0x00, 0x08]
-    apdu.extend(old_pin)
-    apdu.extend(new_pin)
+    # 1) Vérif PIN
+    if not verify_pin_interactive():
+        print("Impossible de créditer : PIN non vérifié.")
+        return False
+
+    # 2) Lecture compteur anti-rejoue
+    ctr = read_counter()
+    if ctr is None:
+        print("Impossible de créditer : compteur indisponible.")
+        return False
+
+    # 3) Conversion du montant en centimes
+    if isinstance(euros_amount, Decimal):
+        cents = int((euros_amount * 100).to_integral_value())
+    else:
+        cents = int(round(float(euros_amount) * 100))
+
+    if cents <= 0:
+        print("Montant à créditer nul ou négatif, rien à faire.")
+        return False
+
+    montant_lsb = cents & 0xFF
+    montant_msb = (cents >> 8) & 0xFF
+
+    p1 = ctr & 0xFF
+    p2 = (ctr >> 8) & 0xFF
+
+    apdu = [0x82, 0x02, p1, p2, 0x02, montant_lsb, montant_msb]
 
     try:
         data, sw1, sw2 = conn_reader.transmit(apdu)
-        print("sw1 : 0x%02X | sw2 : 0x%02X" % (sw1, sw2))
+        print("Crédit - sw1 : 0x%02X | sw2 : 0x%02X" % (sw1, sw2))
     except scardexcp.CardConnectionException as e:
         print("error : ", e)
-        return
+        return False
 
     if sw1 == 0x90 and sw2 == 0x00:
-        print("PIN changé avec succès.")
-    elif sw1 == 0x6C and sw2 == 0x08:
-        print("Erreur de longueur (P3 doit être 8).")
-    elif sw1 == 0x63:
-        print("Ancien PIN incorrect. Essais restants : %d" % sw2)
-    elif sw1 == 0x69 and sw2 == 0x83:
-        print("PIN bloqué (plus d'essais).")
+        print("Crédit effectué : %.2f €" % (cents / 100.0))
+        return True
+    elif sw1 == 0x61 and sw2 == 0x00:
+        print("Capacité maximale de rechargement dépassée.")
+    elif sw1 == 0x69 and sw2 == 0x82:
+        print("Statut de sécurité non satisfait (PIN non vérifié côté carte).")
+    elif sw1 == 0x69 and sw2 == 0x84:
+        print("Erreur anti-rejoue (compteur invalide).")
+    elif sw1 == 0x6C:
+        print("Erreur de longueur (la carte attend %d octets)." % sw2)
     else:
-        print("Erreur lors du changement de PIN.")
+        print("Erreur lors du crédit.")
+    return False
 
 
 # =========================
-#  Boucle principale
+#  FONCTIONS BDD (PurpleDragon)
+# =========================
+
+def get_bonus_disponible(etu_num):
+    """
+    Retourne le total des bonus encore non transférés pour l'étudiant.
+      SELECT SUM(opr_montant)
+      FROM Compte
+      WHERE etu_num = ? AND type_opeartion='Bonus'
+    """
+    sql = """
+        SELECT COALESCE(SUM(opr_montant), 0)
+        FROM Compte
+        WHERE etu_num = %s
+          AND type_opeartion = 'Bonus'
+    """
+    cursor = cnx.cursor()
+    cursor.execute(sql, (etu_num,))
+    row = cursor.fetchone()
+    cursor.close()
+    if row is None or row[0] is None:
+        return Decimal("0.00")
+    return Decimal(str(row[0]))
+
+
+def marquer_bonus_transfere(etu_num):
+    """
+    Passe tous les bonus 'Bonus' de cet étudiant en 'Bonus transféré'.
+    Retourne le nombre de lignes modifiées.
+    """
+    sql = """
+        UPDATE Compte
+        SET type_opeartion = 'Bonus transféré'
+        WHERE etu_num = %s
+          AND type_opeartion = 'Bonus'
+    """
+    cursor = cnx.cursor()
+    cursor.execute(sql, (etu_num,))
+    cnx.commit()
+    nb = cursor.rowcount
+    cursor.close()
+    return nb
+
+
+# =========================
+#  LOGIQUE BERLICUM
+# =========================
+
+def consulter_et_transferer_bonus():
+    """
+    - Lit le numéro étudiant sur la carte
+    - Calcule le total des bonus disponibles en BDD (type_opeartion='Bonus')
+    - Affiche ce montant
+    - Propose de le transférer sur la carte
+    - Si OK : crédite la carte puis met à jour la BDD (Bonus -> Bonus transféré)
+    """
+    print("=== Consultation / Transfert des bonus BDD -> carte ===")
+
+    etu_num = get_student_number_from_card()
+    if etu_num is None:
+        return
+
+    print(f"Numéro étudiant trouvé sur la carte : {etu_num}")
+
+    montant_bonus = get_bonus_disponible(etu_num)
+    if montant_bonus <= 0:
+        print("Aucun bonus disponible en base pour cet étudiant.")
+        return
+
+    print("Bonus disponible en base pour cet étudiant : %.2f €" % montant_bonus)
+
+    rep = input("Souhaitez-vous transférer ce montant sur la carte ? (o/n) : ").strip().lower()
+    if rep not in ("o", "oui", "y", "yes"):
+        print("Transfert annulé.")
+        return
+
+    # Créditer la carte
+    if not credit_card_amount(montant_bonus):
+        print("Transfert annulé suite à une erreur de crédit sur la carte.")
+        return
+
+    # Mise à jour BDD : Bonus -> Bonus transféré
+    nb = marquer_bonus_transfere(etu_num)
+    print(f"Bonus transférés en base de données (lignes mises à jour : {nb}).")
+
+
+# =========================
+#  MAIN LOOP
 # =========================
 
 def main():
     init_smart_card()
+    init_db()
     print_hello_message()
+
     while True:
         print_menu()
         try:
@@ -414,20 +465,15 @@ def main():
         elif cmd == 2:
             print_data()
         elif cmd == 3:
-            assign_card()
+            consulter_et_transferer_bonus()
         elif cmd == 4:
-            assign_inital_sold()
-        elif cmd == 5:
             read_sold()
-        elif cmd == 6:
-            change_pin()
-        elif cmd == 7:
+        elif cmd == 5:
             print("Au revoir.")
             break
         else:
             print("Commande inconnue !")
 
-        # Pause avant de revenir au menu (sauf si l'utilisateur fait CTRL-C)
         try:
             input("\nAppuyez sur Entrée pour revenir au menu...")
         except KeyboardInterrupt:
