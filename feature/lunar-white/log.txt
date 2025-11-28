@@ -1,1158 +1,327 @@
-[2025-11-27 16:31:56] Carte détectée
-[2025-11-27 16:31:58] Carte détectée
-[2025-11-27 16:32:00] Carte détectée
-[2025-11-27 16:32:02] Carte détectée
-[2025-11-27 16:32:04] Carte détectée
-[2025-11-27 16:32:06] Carte détectée
-[2025-11-27 16:32:08] Carte détectée
-[2025-11-27 16:32:10] Carte détectée
-[2025-11-27 16:32:11] Carte détectée
-[2025-11-27 16:32:12] Carte détectée
-[2025-11-27 16:32:13] Carte détectée
-[2025-11-27 16:32:14] Carte détectée
-[2025-11-27 16:32:15] Carte détectée
-[2025-11-27 16:32:15] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unresponsive.: Card is unresponsive. (0x80100066)
-[2025-11-27 16:32:16] Carte détectée
-[2025-11-27 16:32:18] Carte détectée
-[2025-11-27 16:32:20] Carte détectée
-[2025-11-27 16:32:22] Carte détectée
-[2025-11-27 16:32:24] Carte détectée
-[2025-11-27 16:32:26] Carte détectée
-[2025-11-27 16:32:28] Carte détectée
-[2025-11-27 16:32:30] Carte détectée
-[2025-11-27 16:32:32] Carte détectée
-[2025-11-27 16:32:34] Carte détectée
-[2025-11-27 16:32:36] Carte détectée
-[2025-11-27 16:32:38] Carte détectée
-[2025-11-27 16:32:40] Carte détectée
-[2025-11-27 16:32:42] Carte détectée
-[2025-11-27 16:32:44] Carte détectée
-[2025-11-27 16:32:46] Carte détectée
-[2025-11-27 16:32:48] Carte détectée
-[2025-11-27 16:32:50] Carte détectée
-[2025-11-27 16:32:52] Carte détectée
-[2025-11-27 16:32:54] Carte détectée
-[2025-11-27 16:32:56] Carte détectée
-[2025-11-27 16:32:58] Carte détectée
-[2025-11-27 16:33:00] Carte détectée
-[2025-11-27 16:33:02] Carte détectée
-[2025-11-27 16:33:04] Carte détectée
-[2025-11-27 16:33:05] Échec vérification PIN: PIN incorrect - 2 essai(s) restant(s)
-[2025-11-27 16:33:06] Carte détectée
-[2025-11-27 16:33:08] Carte détectée
-[2025-11-27 16:33:10] Carte détectée
-[2025-11-27 16:33:12] Carte détectée
-[2025-11-27 16:33:14] Carte détectée
-[2025-11-27 16:33:20] Carte détectée
-[2025-11-27 16:33:42] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:43] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:43] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:44] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:44] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:44] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:44] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:44] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:33:45] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:21] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:23] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:25] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:27] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:29] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:34] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:36] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:38] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:40] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:34:42] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:34:44] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:34:47] Carte détectée
-[2025-11-27 16:34:48] Carte détectée
-[2025-11-27 16:34:49] Carte détectée
-[2025-11-27 16:34:50] Carte détectée
-[2025-11-27 16:34:50] Erreur lecture solde: Exception: Failed to transmit with protocol T0. Card was reset.: Card was reset. (0x80100068)
-[2025-11-27 16:34:51] Carte détectée
-[2025-11-27 16:34:52] Carte détectée
-[2025-11-27 16:34:53] Carte détectée
-[2025-11-27 16:34:54] Carte détectée
-[2025-11-27 16:34:55] PIN vérifié - Solde: 1.00€
-[2025-11-27 16:34:55] Carte détectée
-[2025-11-27 16:34:56] Carte détectée
-[2025-11-27 16:34:57] Carte détectée
-[2025-11-27 16:34:58] Carte détectée
-[2025-11-27 16:35:03] Carte détectée
-[2025-11-27 16:35:04] Carte détectée
-[2025-11-27 16:35:05] Carte détectée
-[2025-11-27 16:35:06] Carte détectée
-[2025-11-27 16:35:07] Carte détectée
-[2025-11-27 16:35:08] Carte détectée
-[2025-11-27 16:35:09] Carte détectée
-[2025-11-27 16:35:10] Carte détectée
-[2025-11-27 16:35:11] Carte détectée
-[2025-11-27 16:35:12] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:39:16] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:39:18] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:39:20] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:39:22] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:39:24] Carte détectée
-[2025-11-27 16:39:26] Carte détectée
-[2025-11-27 16:39:27] Carte détectée
-[2025-11-27 16:39:28] Carte détectée
-[2025-11-27 16:39:29] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:39:33] Carte détectée
-[2025-11-27 16:39:34] Carte détectée
-[2025-11-27 16:39:35] Carte détectée
-[2025-11-27 16:39:36] Carte détectée
-[2025-11-27 16:39:37] Carte détectée
-[2025-11-27 16:39:38] Carte détectée
-[2025-11-27 16:39:39] PIN vérifié - Solde: 1.00€
-[2025-11-27 16:39:39] Carte détectée
-[2025-11-27 16:39:40] Carte détectée
-[2025-11-27 16:39:41] Carte détectée
-[2025-11-27 16:39:42] Carte détectée
-[2025-11-27 16:39:47] Carte détectée
-[2025-11-27 16:39:48] Carte détectée
-[2025-11-27 16:39:53] Carte détectée
-[2025-11-27 16:39:54] Carte détectée
-[2025-11-27 16:42:07] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:08] Carte détectée
-[2025-11-27 16:42:10] Carte détectée
-[2025-11-27 16:42:11] Carte détectée
-[2025-11-27 16:42:12] PIN vérifié - Solde: 1.00€
-[2025-11-27 16:42:12] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unresponsive.: Card is unresponsive. (0x80100066)
-[2025-11-27 16:42:16] Carte détectée
-[2025-11-27 16:42:17] Carte détectée
-[2025-11-27 16:42:18] Carte détectée
-[2025-11-27 16:42:19] Carte détectée
-[2025-11-27 16:42:21] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:42:25] Carte détectée
-[2025-11-27 16:42:26] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:30] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:32] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:34] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:36] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:38] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:40] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:42] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:44] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:46] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:42:48] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:42:50] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:42:52] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:42:54] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:42:56] Carte détectée
-[2025-11-27 16:42:57] Carte détectée
-[2025-11-27 16:42:58] Carte détectée
-[2025-11-27 16:42:59] Carte détectée
-[2025-11-27 16:43:00] Carte détectée
-[2025-11-27 16:43:01] Carte détectée
-[2025-11-27 16:43:02] Carte détectée
-[2025-11-27 16:43:03] Carte détectée
-[2025-11-27 16:43:04] Carte détectée
-[2025-11-27 16:43:05] Carte détectée
-[2025-11-27 16:43:06] Carte détectée
-[2025-11-27 16:43:07] PIN vérifié - Solde: 1.00€
-[2025-11-27 16:43:08] Carte détectée
-[2025-11-27 16:43:08] Carte détectée
-[2025-11-27 16:43:09] Carte détectée
-[2025-11-27 16:43:15] Carte détectée
-[2025-11-27 16:43:15] Carte détectée
-[2025-11-27 16:43:17] Carte détectée
-[2025-11-27 16:43:18] Carte détectée
-[2025-11-27 16:43:19] Carte détectée
-[2025-11-27 16:43:20] Carte détectée
-[2025-11-27 16:43:25] Carte détectée
-[2025-11-27 16:43:26] Carte détectée
-[2025-11-27 16:43:27] Carte détectée
-[2025-11-27 16:43:28] Carte détectée
-[2025-11-27 16:43:29] Carte détectée
-[2025-11-27 16:43:30] Carte détectée
-[2025-11-27 16:43:30] ACHAT: Thé - 0.20€ débités - Nouveau solde: 0.80€
-[2025-11-27 16:43:36] Carte détectée
-[2025-11-27 16:43:37] Carte détectée
-[2025-11-27 16:43:38] Carte détectée
-[2025-11-27 16:43:39] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:43:43] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:43:45] Carte détectée
-[2025-11-27 16:43:46] Carte détectée
-[2025-11-27 16:43:47] Carte détectée
-[2025-11-27 16:43:47] PIN vérifié - Solde: 0.80€
-[2025-11-27 16:43:48] Carte détectée
-[2025-11-27 16:43:49] Carte détectée
-[2025-11-27 16:43:50] Carte détectée
-[2025-11-27 16:43:51] Carte détectée
-[2025-11-27 16:43:56] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:00] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:04] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:06] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:08] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:10] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:12] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:14] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:16] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:18] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:20] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:22] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:24] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:26] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:28] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:30] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:32] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:44:34] Carte détectée
-[2025-11-27 16:44:35] Carte détectée
-[2025-11-27 16:44:36] Carte détectée
-[2025-11-27 16:44:37] Échec vérification PIN: PIN incorrect - 2 essai(s) restant(s)
-[2025-11-27 16:44:37] Carte détectée
-[2025-11-27 16:44:38] Carte détectée
-[2025-11-27 16:44:39] Carte détectée
-[2025-11-27 16:44:39] Erreur lecture solde: Exception: Failed to transmit with protocol T0. Card was reset.: Card was reset. (0x80100068)
-[2025-11-27 16:44:40] Carte détectée
-[2025-11-27 16:44:41] Carte détectée
-[2025-11-27 16:44:42] Carte détectée
-[2025-11-27 16:44:43] Carte détectée
-[2025-11-27 16:44:44] PIN vérifié - Solde: 0.80€
-[2025-11-27 16:44:44] Carte détectée
-[2025-11-27 16:44:45] Carte détectée
-[2025-11-27 16:44:46] Carte détectée
-[2025-11-27 16:44:47] Carte détectée
-[2025-11-27 16:44:48] Carte détectée
-[2025-11-27 16:44:49] Carte détectée
-[2025-11-27 16:44:54] Carte détectée
-[2025-11-27 16:44:55] Carte détectée
-[2025-11-27 16:44:56] Carte détectée
-[2025-11-27 16:44:57] Carte détectée
-[2025-11-27 16:44:58] Carte détectée
-[2025-11-27 16:44:59] Carte détectée
-[2025-11-27 16:45:01] ACHAT: Thé - 0.20€ débités - Nouveau solde: 0.60€
-[2025-11-27 16:45:05] Carte détectée
-[2025-11-27 16:45:16] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:18] Carte détectée
-[2025-11-27 16:45:20] Carte détectée
-[2025-11-27 16:45:21] Carte détectée
-[2025-11-27 16:45:22] Carte détectée
-[2025-11-27 16:45:23] Carte détectée
-[2025-11-27 16:45:24] Carte détectée
-[2025-11-27 16:45:25] Carte détectée
-[2025-11-27 16:45:26] Carte détectée
-[2025-11-27 16:45:27] Carte détectée
-[2025-11-27 16:45:28] Carte détectée
-[2025-11-27 16:45:29] Carte détectée
-[2025-11-27 16:45:30] Carte détectée
-[2025-11-27 16:45:31] Carte détectée
-[2025-11-27 16:45:37] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:37] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:37] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:37] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:37] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:37] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:41] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:43] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:45:49] Carte détectée
-[2025-11-27 16:45:50] Carte détectée
-[2025-11-27 16:45:51] Carte détectée
-[2025-11-27 16:45:51] Erreur lecture solde: Exception: Failed to transmit with protocol T0. Card was reset.: Card was reset. (0x80100068)
-[2025-11-27 16:45:52] Carte détectée
-[2025-11-27 16:45:53] Carte détectée
-[2025-11-27 16:45:54] Carte détectée
-[2025-11-27 16:46:00] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:05] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:05] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:05] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:05] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:05] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:05] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:06] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:08] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:11] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:13] Carte détectée
-[2025-11-27 16:46:14] Carte détectée
-[2025-11-27 16:46:20] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:25] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:26] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:26] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:27] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:27] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:28] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:28] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:30] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:32] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:34] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:36] Carte détectée
-[2025-11-27 16:46:37] Carte détectée
-[2025-11-27 16:46:43] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:43] Carte détectée
-[2025-11-27 16:46:43] Carte détectée
-[2025-11-27 16:46:43] Carte détectée
-[2025-11-27 16:46:43] Carte détectée
-[2025-11-27 16:46:43] Carte détectée
-[2025-11-27 16:46:43] Échec vérification PIN: Exception: Failed to transmit with protocol T0. Card was reset.: Card was reset. (0x80100068)
-[2025-11-27 16:46:47] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:46:49] Carte détectée
-[2025-11-27 16:46:50] Carte détectée
-[2025-11-27 16:46:51] Carte détectée
-[2025-11-27 16:46:51] Erreur lecture solde: Exception: Failed to transmit with protocol T0. Card was reset.: Card was reset. (0x80100068)
-[2025-11-27 16:46:57] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:03] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:06] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:08] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:10] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:12] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:14] Carte détectée
-[2025-11-27 16:47:16] Carte détectée
-[2025-11-27 16:47:21] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:27] Carte détectée
-[2025-11-27 16:47:27] Carte détectée
-[2025-11-27 16:47:27] Carte détectée
-[2025-11-27 16:47:27] Carte détectée
-[2025-11-27 16:47:27] Carte détectée
-[2025-11-27 16:47:27] Carte détectée
-[2025-11-27 16:47:28] Carte détectée
-[2025-11-27 16:47:29] Carte détectée
-[2025-11-27 16:47:30] PIN vérifié - Solde: 0.60€
-[2025-11-27 16:47:30] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unresponsive.: Card is unresponsive. (0x80100066)
-[2025-11-27 16:47:34] Carte détectée
-[2025-11-27 16:47:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:44] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:48] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:50] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:52] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:54] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:56] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:47:58] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:00] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:04] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:06] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:08] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:10] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:12] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:14] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:16] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:18] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:20] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:22] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:24] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:26] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:28] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:30] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:32] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:34] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:36] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:38] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:42] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:44] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:48] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:50] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:52] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:54] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:56] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:48:58] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:00] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:04] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:06] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:08] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:10] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:12] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:14] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:16] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:18] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:20] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:49:22] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:49:24] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:49:26] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:49:28] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:49:31] Carte détectée
-[2025-11-27 16:49:32] Carte détectée
-[2025-11-27 16:49:33] Carte détectée
-[2025-11-27 16:49:33] Erreur lecture solde: Exception: Failed to transmit with protocol T0. Card was reset.: Card was reset. (0x80100068)
-[2025-11-27 16:49:34] Carte détectée
-[2025-11-27 16:49:35] Carte détectée
-[2025-11-27 16:49:36] PIN vérifié - Solde: 0.60€
-[2025-11-27 16:49:36] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unresponsive.: Card is unresponsive. (0x80100066)
-[2025-11-27 16:49:40] Carte détectée
-[2025-11-27 16:49:41] Carte détectée
-[2025-11-27 16:49:42] Carte détectée
-[2025-11-27 16:49:43] Carte détectée
-[2025-11-27 16:49:44] Carte détectée
-[2025-11-27 16:49:45] Carte détectée
-[2025-11-27 16:49:46] PIN vérifié - Solde: 0.60€
-[2025-11-27 16:49:46] Carte détectée
-[2025-11-27 16:49:47] Carte détectée
-[2025-11-27 16:49:48] Carte détectée
-[2025-11-27 16:49:49] Carte détectée
-[2025-11-27 16:49:54] Carte détectée
-[2025-11-27 16:49:55] Carte détectée
-[2025-11-27 16:49:56] Carte détectée
-[2025-11-27 16:49:57] Carte détectée
-[2025-11-27 16:49:58] Carte détectée
-[2025-11-27 16:49:59] Carte détectée
-[2025-11-27 16:50:00] Carte détectée
-[2025-11-27 16:50:01] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:05] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:07] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:09] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:11] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:13] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:15] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:17] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:19] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:21] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:23] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:50:27] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 16:50:29] Carte détectée
-[2025-11-27 16:50:31] Carte détectée
-[2025-11-27 16:50:32] Carte détectée
-[2025-11-27 16:50:32] PIN vérifié - Solde: 0.60€
-[2025-11-27 16:50:33] Carte détectée
-[2025-11-27 16:50:34] Carte détectée
-[2025-11-27 16:50:35] Carte détectée
-[2025-11-27 16:50:35] Échec vérification PIN: Exception: Failed to transmit with protocol T0. Card was reset.: Card was reset. (0x80100068)
-[2025-11-27 16:50:40] Carte détectée
-[2025-11-27 16:50:41] Carte détectée
-[2025-11-27 16:50:42] Carte détectée
-[2025-11-27 16:50:43] Carte détectée
-[2025-11-27 16:50:44] Carte détectée
-[2025-11-27 16:50:45] Carte détectée
-[2025-11-27 16:50:46] Carte détectée
-[2025-11-27 16:50:47] Carte détectée
-[2025-11-27 16:50:48] Carte détectée
-[2025-11-27 16:50:49] Carte détectée
-[2025-11-27 16:50:50] Carte détectée
-[2025-11-27 16:50:51] Carte détectée
-[2025-11-27 16:50:52] Carte détectée
-[2025-11-27 16:50:53] Carte détectée
-[2025-11-27 16:50:54] Carte détectée
-[2025-11-27 16:50:55] Carte détectée
-[2025-11-27 16:50:56] Carte détectée
-[2025-11-27 16:50:57] Carte détectée
-[2025-11-27 16:50:58] Carte détectée
-[2025-11-27 16:50:59] Carte détectée
-[2025-11-27 16:51:00] Carte détectée
-[2025-11-27 16:51:01] Carte détectée
-[2025-11-27 16:51:02] Carte détectée
-[2025-11-27 16:51:03] Carte détectée
-[2025-11-27 16:51:04] Carte détectée
-[2025-11-27 16:51:05] Carte détectée
-[2025-11-27 16:51:06] Carte détectée
-[2025-11-27 16:51:07] Carte détectée
-[2025-11-27 16:51:08] Carte détectée
-[2025-11-27 16:51:09] Carte détectée
-[2025-11-27 16:51:10] Carte détectée
-[2025-11-27 16:51:11] Carte détectée
-[2025-11-27 16:51:12] Carte détectée
-[2025-11-27 16:51:13] Carte détectée
-[2025-11-27 16:51:14] Carte détectée
-[2025-11-27 16:51:15] Carte détectée
-[2025-11-27 16:51:16] Carte détectée
-[2025-11-27 16:51:17] Carte détectée
-[2025-11-27 16:51:18] Carte détectée
-[2025-11-27 16:51:19] Carte détectée
-[2025-11-27 16:51:20] Carte détectée
-[2025-11-27 16:51:21] Carte détectée
-[2025-11-27 16:51:22] Carte détectée
-[2025-11-27 16:51:23] Carte détectée
-[2025-11-27 16:51:24] Carte détectée
-[2025-11-27 16:51:25] Carte détectée
-[2025-11-27 16:51:26] Carte détectée
-[2025-11-27 16:51:27] Carte détectée
-[2025-11-27 16:51:28] Carte détectée
-[2025-11-27 16:51:29] Carte détectée
-[2025-11-27 16:51:30] Carte détectée
-[2025-11-27 16:51:31] Carte détectée
-[2025-11-27 16:51:32] Carte détectée
-[2025-11-27 16:51:33] Carte détectée
-[2025-11-27 16:51:34] Carte détectée
-[2025-11-27 16:51:35] Carte détectée
-[2025-11-27 16:51:41] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:51:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:51:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:51:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:51:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:51:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:51:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 16:51:47] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Reader is unavailable.: Reader is unavailable. (0x80100017)
-[2025-11-27 16:51:49] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:51:51] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:51:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:51:55] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:51:57] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:51:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:01] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:03] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:07] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:09] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:13] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:15] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:19] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:21] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:27] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:31] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:33] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:37] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:39] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:43] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:45] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:49] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:51] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:55] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:57] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:52:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:01] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:03] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:07] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:09] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:13] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:15] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:19] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:21] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:27] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:31] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:33] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:37] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:39] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:43] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:45] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:49] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:51] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:55] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:57] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:53:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:01] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:03] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:07] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:09] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:13] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:15] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:19] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:21] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:27] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:31] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:33] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:37] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:39] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:43] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:45] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:49] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:51] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:55] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:57] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:54:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:01] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:03] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:07] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:09] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:13] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:15] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:19] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:21] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:27] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:31] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:33] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:37] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:39] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:43] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:45] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:49] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:51] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:55] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:57] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:55:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:01] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:03] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:07] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:09] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:13] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:15] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:19] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:21] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:27] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:31] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:33] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:37] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:39] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:43] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:45] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:49] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:51] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:55] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:57] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:56:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:01] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:03] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:07] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:09] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:13] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 16:57:15] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:02:51] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:02:52] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:02:54] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:02:56] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:02:58] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:00] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:02] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:04] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:06] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:08] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:10] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:12] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:14] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:16] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:18] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:20] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:22] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:24] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:26] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:28] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:33] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:03:36] Carte détectée
-[2025-11-27 17:03:38] PIN vérifié - Solde: 0.60€
-[2025-11-27 17:03:41] ACHAT: Café - 0.20€ débités - Nouveau solde: 0.40€
-[2025-11-27 17:03:46] Carte détectée
-[2025-11-27 17:04:05] Carte détectée
-[2025-11-27 17:04:08] PIN vérifié - Solde: 0.40€
-[2025-11-27 17:04:10] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:15] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:20] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:25] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:28] Carte détectée
-[2025-11-27 17:04:33] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:38] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:43] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:48] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:04:51] Carte détectée
-[2025-11-27 17:04:53] PIN vérifié - Solde: 0.40€
-[2025-11-27 17:04:57] Carte détectée
-[2025-11-27 17:05:02] Carte détectée
-[2025-11-27 17:05:07] Carte détectée
-[2025-11-27 17:05:12] Carte détectée
-[2025-11-27 17:05:17] Carte détectée
-[2025-11-27 17:05:22] Carte détectée
-[2025-11-27 17:05:27] Carte détectée
-[2025-11-27 17:05:32] Carte détectée
-[2025-11-27 17:05:37] Carte détectée
-[2025-11-27 17:05:42] Carte détectée
-[2025-11-27 17:05:47] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:05:57] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:02] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:07] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:10] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:13] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:16] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:19] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:22] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:25] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:28] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:31] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:34] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:37] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:40] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:43] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:46] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:49] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:52] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:55] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Card is unpowered.: Card is unpowered. (0x80100067)
-[2025-11-27 17:06:58] Carte détectée
-[2025-11-27 17:07:03] Carte détectée
-[2025-11-27 17:07:08] Carte détectée
-[2025-11-27 17:07:09] Échec vérification PIN: PIN incorrect - 2 essai(s) restant(s)
-[2025-11-27 17:07:13] PIN vérifié - Solde: 0.40€
-[2025-11-27 17:07:13] Carte détectée
-[2025-11-27 17:07:18] Carte détectée
-[2025-11-27 17:07:22] ACHAT: Chocolat chaud - 0.20€ débités - Nouveau solde: 0.20€
-[2025-11-27 17:07:28] Carte détectée
-[2025-11-27 17:07:32] Carte détectée
-[2025-11-27 17:07:37] ERREUR: CARD_DISCONNECTED
-[2025-11-27 17:07:42] ERREUR: CARD_DISCONNECTED
-[2025-11-27 17:07:47] ERREUR: CARD_DISCONNECTED
-[2025-11-27 17:07:52] Carte déconnectée (unpowered)
-[2025-11-27 17:07:55] Carte déconnectée (unpowered)
-[2025-11-27 17:07:58] Carte déconnectée (unpowered)
-[2025-11-27 17:08:01] Carte déconnectée (unpowered)
-[2025-11-27 17:08:04] Carte déconnectée (unpowered)
-[2025-11-27 17:08:07] Carte déconnectée (unpowered)
-[2025-11-27 17:08:10] Carte déconnectée (unpowered)
-[2025-11-27 17:08:13] Carte déconnectée (unpowered)
-[2025-11-27 17:08:16] Carte déconnectée (unpowered)
-[2025-11-27 17:08:19] Carte déconnectée (unpowered)
-[2025-11-27 17:08:22] Carte déconnectée (unpowered)
-[2025-11-27 17:08:25] Carte déconnectée (unpowered)
-[2025-11-27 17:08:28] Carte déconnectée (unpowered)
-[2025-11-27 17:08:31] Carte déconnectée (unpowered)
-[2025-11-27 17:08:34] Carte déconnectée (unpowered)
-[2025-11-27 17:08:37] Carte déconnectée (unpowered)
-[2025-11-27 17:08:40] Carte déconnectée (unpowered)
-[2025-11-27 17:08:43] Carte déconnectée (unpowered)
-[2025-11-27 17:08:46] Carte déconnectée (unpowered)
-[2025-11-27 17:08:49] Carte déconnectée (unpowered)
-[2025-11-27 17:08:52] Carte déconnectée (unpowered)
-[2025-11-27 17:08:55] Carte déconnectée (unpowered)
-[2025-11-27 17:08:58] Carte déconnectée (unpowered)
-[2025-11-27 17:09:01] Carte déconnectée (unpowered)
-[2025-11-27 17:09:04] Carte déconnectée (unpowered)
-[2025-11-27 17:09:07] Carte déconnectée (unpowered)
-[2025-11-27 17:09:10] Carte déconnectée (unpowered)
-[2025-11-27 17:09:13] Carte déconnectée (unpowered)
-[2025-11-27 17:09:16] Carte déconnectée (unpowered)
-[2025-11-27 17:09:19] Carte déconnectée (unpowered)
-[2025-11-27 17:09:22] Carte déconnectée (unpowered)
-[2025-11-27 17:09:25] Carte déconnectée (unpowered)
-[2025-11-27 17:09:28] Carte déconnectée (unpowered)
-[2025-11-27 17:09:31] Carte déconnectée (unpowered)
-[2025-11-27 17:09:34] Carte déconnectée (unpowered)
-[2025-11-27 17:09:37] Carte déconnectée (unpowered)
-[2025-11-27 17:09:40] Carte déconnectée (unpowered)
-[2025-11-27 17:09:43] Carte déconnectée (unpowered)
-[2025-11-27 17:09:46] Carte déconnectée (unpowered)
-[2025-11-27 17:09:49] Carte déconnectée (unpowered)
-[2025-11-27 17:09:52] Carte déconnectée (unpowered)
-[2025-11-27 17:09:55] Carte déconnectée (unpowered)
-[2025-11-27 17:09:58] Carte déconnectée (unpowered)
-[2025-11-27 17:10:01] Carte déconnectée (unpowered)
-[2025-11-27 17:10:04] Carte déconnectée (unpowered)
-[2025-11-27 17:10:07] Carte déconnectée (unpowered)
-[2025-11-27 17:10:10] Carte déconnectée (unpowered)
-[2025-11-27 17:10:13] Carte déconnectée (unpowered)
-[2025-11-27 17:10:16] Carte déconnectée (unpowered)
-[2025-11-27 17:10:19] Carte déconnectée (unpowered)
-[2025-11-27 17:10:22] Carte déconnectée (unpowered)
-[2025-11-27 17:10:25] Carte déconnectée (unpowered)
-[2025-11-27 17:10:28] Carte déconnectée (unpowered)
-[2025-11-27 17:10:31] Carte déconnectée (unpowered)
-[2025-11-27 17:10:36] Carte déconnectée (unpowered)
-[2025-11-27 17:10:39] Carte détectée
-[2025-11-27 17:10:48] Carte déconnectée (unpowered)
-[2025-11-27 17:10:51] Carte déconnectée (unpowered)
-[2025-11-27 17:10:54] Carte déconnectée (unpowered)
-[2025-11-27 17:10:57] Carte déconnectée (unpowered)
-[2025-11-27 17:11:00] Carte déconnectée (unpowered)
-[2025-11-27 17:11:03] Carte déconnectée (unpowered)
-[2025-11-27 17:11:06] Carte déconnectée (unpowered)
-[2025-11-27 17:11:09] Carte déconnectée (unpowered)
-[2025-11-27 17:11:12] Carte déconnectée (unpowered)
-[2025-11-27 17:11:15] Carte déconnectée (unpowered)
-[2025-11-27 17:11:18] Carte déconnectée (unpowered)
-[2025-11-27 17:11:21] Carte déconnectée (unpowered)
-[2025-11-27 17:11:24] Carte déconnectée (unpowered)
-[2025-11-27 17:11:27] Carte déconnectée (unpowered)
-[2025-11-27 17:11:30] Carte déconnectée (unpowered)
-[2025-11-27 17:11:33] Carte déconnectée (unpowered)
-[2025-11-27 17:11:36] Carte déconnectée (unpowered)
-[2025-11-27 17:11:39] Carte déconnectée (unpowered)
-[2025-11-27 17:11:42] Carte déconnectée (unpowered)
-[2025-11-27 17:11:45] Carte déconnectée (unpowered)
-[2025-11-27 17:11:48] Carte déconnectée (unpowered)
-[2025-11-27 17:11:51] Carte déconnectée (unpowered)
-[2025-11-27 17:11:54] Carte déconnectée (unpowered)
-[2025-11-27 17:11:57] Carte déconnectée (unpowered)
-[2025-11-27 17:12:00] Carte déconnectée (unpowered)
-[2025-11-27 17:12:03] Carte déconnectée (unpowered)
-[2025-11-27 17:12:06] Carte déconnectée (unpowered)
-[2025-11-27 17:12:09] Carte déconnectée (unpowered)
-[2025-11-27 17:12:12] Carte déconnectée (unpowered)
-[2025-11-27 17:12:15] Carte déconnectée (unpowered)
-[2025-11-27 17:12:18] Carte déconnectée (unpowered)
-[2025-11-27 17:12:21] Carte déconnectée (unpowered)
-[2025-11-27 17:12:24] Carte déconnectée (unpowered)
-[2025-11-27 17:12:27] Carte déconnectée (unpowered)
-[2025-11-27 17:12:30] Carte déconnectée (unpowered)
-[2025-11-27 17:12:33] Carte déconnectée (unpowered)
-[2025-11-27 17:12:36] Carte déconnectée (unpowered)
-[2025-11-27 17:12:39] Carte déconnectée (unpowered)
-[2025-11-27 17:12:42] Carte déconnectée (unpowered)
-[2025-11-27 17:12:45] Carte déconnectée (unpowered)
-[2025-11-27 17:12:48] Carte déconnectée (unpowered)
-[2025-11-27 17:12:51] Carte déconnectée (unpowered)
-[2025-11-27 17:12:54] Carte déconnectée (unpowered)
-[2025-11-27 17:12:57] Carte déconnectée (unpowered)
-[2025-11-27 17:13:00] Carte déconnectée (unpowered)
-[2025-11-27 17:13:04] Carte déconnectée (unpowered)
-[2025-11-27 17:13:07] Carte déconnectée (unpowered)
-[2025-11-27 17:13:10] Carte déconnectée (unpowered)
-[2025-11-27 17:13:13] Carte déconnectée (unpowered)
-[2025-11-27 17:13:16] Carte déconnectée (unpowered)
-[2025-11-27 17:13:19] Carte déconnectée (unpowered)
-[2025-11-27 17:13:22] Carte déconnectée (unpowered)
-[2025-11-27 17:13:25] Carte déconnectée (unpowered)
-[2025-11-27 17:13:28] Carte déconnectée (unpowered)
-[2025-11-27 17:13:31] Carte déconnectée (unpowered)
-[2025-11-27 17:13:34] Carte déconnectée (unpowered)
-[2025-11-27 17:13:37] Carte déconnectée (unpowered)
-[2025-11-27 17:13:40] Carte déconnectée (unpowered)
-[2025-11-27 17:13:43] Carte déconnectée (unpowered)
-[2025-11-27 17:13:46] Carte déconnectée (unpowered)
-[2025-11-27 17:13:49] Carte déconnectée (unpowered)
-[2025-11-27 17:13:52] Carte déconnectée (unpowered)
-[2025-11-27 17:13:55] Carte déconnectée (unpowered)
-[2025-11-27 17:13:58] Carte déconnectée (unpowered)
-[2025-11-27 17:14:01] Carte déconnectée (unpowered)
-[2025-11-27 17:14:04] Carte déconnectée (unpowered)
-[2025-11-27 17:14:07] Carte déconnectée (unpowered)
-[2025-11-27 17:14:10] Carte déconnectée (unpowered)
-[2025-11-27 17:14:13] Carte déconnectée (unpowered)
-[2025-11-27 17:14:16] Carte déconnectée (unpowered)
-[2025-11-27 17:14:19] Carte déconnectée (unpowered)
-[2025-11-27 17:14:22] Carte déconnectée (unpowered)
-[2025-11-27 17:14:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:28] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:31] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:34] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:37] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:40] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:43] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:46] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:49] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:52] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:55] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:14:58] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:01] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:04] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:07] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:10] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:13] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:16] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:19] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:22] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:25] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:28] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:31] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:34] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:37] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:40] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:44] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:50] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:15:56] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 17:16:00] Carte déconnectée (unpowered)
-[2025-11-27 17:16:02] Carte détectée
-[2025-11-27 17:16:06] Échec vérification PIN: PIN incorrect - 2 essai(s) restant(s)
-[2025-11-27 17:16:08] Carte détectée
-[2025-11-27 17:16:10] PIN vérifié - Solde: 0.20€
-[2025-11-27 17:16:13] ACHAT: Thé - 0.20€ débités - Nouveau solde: 0.00€
-[2025-11-27 17:16:18] Carte détectée
-[2025-11-27 17:16:23] Carte déconnectée (unpowered)
-[2025-11-27 17:16:26] Carte déconnectée (unpowered)
-[2025-11-27 17:16:29] Carte déconnectée (unpowered)
-[2025-11-27 17:16:32] Carte déconnectée (unpowered)
-[2025-11-27 17:16:35] Carte déconnectée (unpowered)
-[2025-11-27 17:16:38] Carte déconnectée (unpowered)
-[2025-11-27 17:16:41] Carte déconnectée (unpowered)
-[2025-11-27 17:16:44] Carte déconnectée (unpowered)
-[2025-11-27 17:16:47] Carte déconnectée (unpowered)
-[2025-11-27 17:16:50] Carte déconnectée (unpowered)
-[2025-11-27 17:16:53] Carte déconnectée (unpowered)
-[2025-11-27 17:16:56] Carte déconnectée (unpowered)
-[2025-11-27 17:16:59] Carte déconnectée (unpowered)
-[2025-11-27 17:17:02] Carte déconnectée (unpowered)
-[2025-11-27 17:17:05] Carte déconnectée (unpowered)
-[2025-11-27 17:17:08] Carte déconnectée (unpowered)
-[2025-11-27 17:17:11] Carte déconnectée (unpowered)
-[2025-11-27 17:17:14] Carte déconnectée (unpowered)
-[2025-11-27 17:17:17] Carte déconnectée (unpowered)
-[2025-11-27 17:17:20] Carte déconnectée (unpowered)
-[2025-11-27 17:17:23] Carte déconnectée (unpowered)
-[2025-11-27 17:17:32] Carte déconnectée (unpowered)
-[2025-11-27 17:17:35] Carte déconnectée (unpowered)
-[2025-11-27 17:17:38] Carte déconnectée (unpowered)
-[2025-11-27 17:17:41] Carte déconnectée (unpowered)
-[2025-11-27 17:17:46] Carte déconnectée (unpowered)
-[2025-11-27 17:17:49] Carte déconnectée (unpowered)
-[2025-11-27 17:17:52] Carte déconnectée (unpowered)
-[2025-11-27 17:17:55] Carte déconnectée (unpowered)
-[2025-11-27 17:17:58] Carte déconnectée (unpowered)
-[2025-11-27 17:18:02] Carte déconnectée (unpowered)
-[2025-11-27 17:18:05] Carte déconnectée (unpowered)
-[2025-11-27 17:18:08] Carte détectée
-[2025-11-27 17:18:14] Carte déconnectée (unpowered)
-[2025-11-27 17:18:19] Carte détectée
-[2025-11-27 17:18:24] Carte déconnectée (unpowered)
-[2025-11-27 17:18:29] Carte déconnectée (unpowered)
-[2025-11-27 17:18:32] Carte déconnectée (unpowered)
-[2025-11-27 17:18:37] Carte déconnectée (unpowered)
-[2025-11-27 17:18:40] Carte déconnectée (unpowered)
-[2025-11-27 17:18:43] Carte déconnectée (unpowered)
-[2025-11-27 17:18:46] Carte déconnectée (unpowered)
-[2025-11-27 17:18:49] Carte déconnectée (unpowered)
-[2025-11-27 17:18:52] Carte déconnectée (unpowered)
-[2025-11-27 17:18:55] Carte déconnectée (unpowered)
-[2025-11-27 17:18:58] Carte déconnectée (unpowered)
-[2025-11-27 17:19:01] Carte détectée
-[2025-11-27 17:19:06] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 17:19:11] Carte détectée
-[2025-11-27 17:19:14] PIN vérifié - Solde: 1.00€
-[2025-11-27 17:19:16] Carte détectée
-[2025-11-27 17:19:21] Carte détectée
-[2025-11-27 17:19:26] Carte déconnectée (unpowered)
-[2025-11-27 17:19:31] Carte déconnectée (unpowered)
-[2025-11-27 17:19:34] Carte déconnectée (unpowered)
-[2025-11-27 17:19:37] Carte déconnectée (unpowered)
-[2025-11-27 17:19:40] Carte déconnectée (unpowered)
-[2025-11-27 17:19:43] Carte déconnectée (unpowered)
-[2025-11-27 17:19:46] Carte déconnectée (unpowered)
-[2025-11-27 17:19:49] Carte déconnectée (unpowered)
-[2025-11-27 17:19:52] Carte déconnectée (unpowered)
-[2025-11-27 17:19:55] Carte déconnectée (unpowered)
-[2025-11-27 17:19:58] Carte déconnectée (unpowered)
-[2025-11-27 17:20:02] Carte détectée
-[2025-11-27 17:20:07] Carte détectée
-[2025-11-27 17:20:08] PIN vérifié - Solde: 1.00€
-[2025-11-27 17:20:12] ACHAT: Chocolat chaud - 0.20€ débités - Nouveau solde: 0.80€
-[2025-11-27 17:20:17] Carte détectée
-[2025-11-27 17:20:22] Carte détectée
-[2025-11-27 17:20:28] Carte détectée
-[2025-11-27 17:20:33] Carte déconnectée (unpowered)
-[2025-11-27 17:20:38] Carte déconnectée (unpowered)
-[2025-11-27 17:20:41] Carte déconnectée (unpowered)
-[2025-11-27 17:20:44] Carte déconnectée (unpowered)
-[2025-11-27 17:20:47] Carte déconnectée (unpowered)
-[2025-11-27 17:20:50] Carte déconnectée (unpowered)
-[2025-11-27 17:20:53] Carte déconnectée (unpowered)
-[2025-11-27 17:20:56] Carte déconnectée (unpowered)
-[2025-11-27 17:21:01] Carte déconnectée (unpowered)
-[2025-11-27 17:21:04] Carte déconnectée (unpowered)
-[2025-11-27 17:21:07] Carte détectée
-[2025-11-27 17:21:10] PIN vérifié - Solde: 0.80€
-[2025-11-27 17:21:12] Carte détectée
-[2025-11-27 17:21:42] Carte détectée
-[2025-11-27 17:21:45] PIN vérifié - Solde: 0.80€
-[2025-11-27 17:21:47] Carte détectée
-[2025-11-27 17:21:52] Carte détectée
-[2025-11-27 17:21:57] Carte détectée
-[2025-11-27 17:22:02] Carte détectée
-[2025-11-27 17:22:07] Carte détectée
-[2025-11-27 17:22:12] Carte détectée
-[2025-11-27 17:22:17] Carte détectée
-[2025-11-27 17:22:22] Carte détectée
-[2025-11-27 17:22:27] Carte détectée
-[2025-11-27 17:22:34] Carte déconnectée (unpowered)
-[2025-11-27 17:22:37] Carte détectée
-[2025-11-27 17:22:41] PIN vérifié - Solde: 0.80€
-[2025-11-27 17:22:43] Carte détectée
-[2025-11-27 17:22:43] ACHAT: Café - 0.20€ débités - Nouveau solde: 0.60€
-[2025-11-27 17:22:54] Carte détectée
-[2025-11-27 17:22:59] Carte détectée
-[2025-11-27 17:23:03] Carte détectée
-[2025-11-27 17:23:07] PIN vérifié - Solde: 0.60€
-[2025-11-27 17:23:08] Carte détectée
-[2025-11-27 17:24:12] Carte détectée
-[2025-11-27 17:24:17] Carte détectée
-[2025-11-27 17:24:18] PIN vérifié - Solde: 0.60€
-[2025-11-27 17:24:22] ACHAT: Chocolat chaud - 0.20€ débités - Nouveau solde: 0.40€
-[2025-11-27 17:24:27] Carte détectée
-[2025-11-27 17:24:32] Carte détectée
-[2025-11-27 17:24:36] PIN vérifié - Solde: 0.40€
-[2025-11-27 17:24:37] Carte détectée
-[2025-11-27 17:24:41] ACHAT: Thé - 0.20€ débités - Nouveau solde: 0.20€
-[2025-11-27 17:24:47] Carte détectée
-[2025-11-27 17:24:52] Carte détectée
-[2025-11-27 17:24:56] Échec vérification PIN: PIN incorrect - 2 essai(s) restant(s)
-[2025-11-27 17:24:57] Carte détectée
-[2025-11-27 17:25:02] Carte détectée
-[2025-11-27 17:25:23] Carte détectée
-[2025-11-27 17:25:26] PIN vérifié - Solde: 0.20€
-[2025-11-27 17:25:29] Carte détectée
-[2025-11-27 17:25:32] ACHAT: Café - 0.20€ débités - Nouveau solde: 0.00€
-[2025-11-27 17:25:39] Carte déconnectée (unpowered)
-[2025-11-27 17:25:44] Carte déconnectée (unpowered)
-[2025-11-27 17:25:47] Carte déconnectée (unpowered)
-[2025-11-27 17:25:50] Carte déconnectée (unpowered)
-[2025-11-27 17:25:53] Carte détectée
-[2025-11-27 17:25:58] Carte détectée
-[2025-11-27 17:26:04] Carte détectée
-[2025-11-27 17:26:08] PIN vérifié - Solde: 0.00€
-[2025-11-27 17:26:09] Carte détectée
-[2025-11-27 17:26:14] Carte détectée
-[2025-11-27 17:26:18] Carte déconnectée (unpowered)
-[2025-11-27 17:26:21] Carte déconnectée (unpowered)
-[2025-11-27 17:26:24] Carte détectée
-[2025-11-27 17:26:29] Carte déconnectée (unpowered)
-[2025-11-27 17:26:34] Carte détectée
-[2025-11-27 17:26:36] PIN vérifié - Solde: 0.00€
-[2025-11-27 17:26:40] Carte détectée
-[2025-11-27 17:26:45] Carte déconnectée (unpowered)
-[2025-11-27 17:26:50] Carte déconnectée (unpowered)
-[2025-11-27 17:26:53] Carte déconnectée (unpowered)
-[2025-11-27 17:26:56] Carte déconnectée (unpowered)
-[2025-11-27 17:26:59] Carte détectée
-[2025-11-27 17:27:03] PIN vérifié - Solde: 1.00€
-[2025-11-27 17:27:04] Carte détectée
-[2025-11-27 17:27:05] ACHAT: Thé - 0.20€ débités - Nouveau solde: 0.80€
-[2025-11-27 17:27:15] Carte détectée
-[2025-11-27 17:27:21] Carte déconnectée (unpowered)
-[2025-11-27 17:27:26] Carte déconnectée (unpowered)
-[2025-11-27 17:27:29] Carte déconnectée (unpowered)
-[2025-11-27 17:27:32] Carte déconnectée (unpowered)
-[2025-11-27 17:27:35] Carte déconnectée (unpowered)
-[2025-11-27 17:27:38] Carte déconnectée (unpowered)
-[2025-11-27 17:27:41] Carte déconnectée (unpowered)
-[2025-11-27 17:27:44] Carte déconnectée (unpowered)
-[2025-11-27 17:27:47] Carte déconnectée (unpowered)
-[2025-11-27 17:27:50] Carte déconnectée (unpowered)
-[2025-11-27 17:27:53] Carte déconnectée (unpowered)
-[2025-11-27 17:27:56] Carte déconnectée (unpowered)
-[2025-11-27 17:27:59] Carte déconnectée (unpowered)
-[2025-11-27 17:28:02] Carte déconnectée (unpowered)
-[2025-11-27 17:28:05] Carte déconnectée (unpowered)
-[2025-11-27 17:28:08] Carte déconnectée (unpowered)
-[2025-11-27 17:28:11] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Reader is unavailable.: Reader is unavailable. (0x80100017)
-[2025-11-27 17:28:14] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:20] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:26] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:32] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:38] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:44] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:50] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:56] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:28:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:02] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:08] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:14] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:20] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:26] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:32] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:38] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:44] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:50] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:56] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:29:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:02] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:05] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:08] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:11] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:14] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:17] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:20] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:23] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:26] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:29] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:32] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:38] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:44] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:47] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:50] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:53] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:56] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:30:59] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:31:02] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:31:32] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:31:35] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:31:38] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:31:41] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:31:44] ERREUR: Aucun lecteur de carte détecté
-[2025-11-27 17:31:47] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
-[2025-11-27 17:31:50] Carte détectée
-[2025-11-27 17:31:52] PIN vérifié - Solde: 0.00€
-[2025-11-27 17:31:55] Carte détectée
-[2025-11-27 17:32:00] Carte déconnectée (unpowered)
-[2025-11-27 17:32:05] Carte déconnectée (unpowered)
-[2025-11-27 17:32:08] Carte déconnectée (unpowered)
-[2025-11-27 17:32:11] Carte déconnectée (unpowered)
-[2025-11-27 17:32:14] Carte déconnectée (unpowered)
-[2025-11-27 17:32:17] Carte déconnectée (unpowered)
-[2025-11-27 17:32:20] Carte déconnectée (unpowered)
-[2025-11-27 17:32:23] Carte déconnectée (unpowered)
-[2025-11-27 17:32:26] Carte déconnectée (unpowered)
-[2025-11-27 17:32:29] Carte déconnectée (unpowered)
-[2025-11-27 17:32:32] Carte déconnectée (unpowered)
-[2025-11-27 17:32:35] Carte déconnectée (unpowered)
-[2025-11-27 17:32:38] Carte déconnectée (unpowered)
-[2025-11-27 17:32:41] Carte détectée
-[2025-11-27 17:32:44] PIN vérifié - Solde: 0.00€
-[2025-11-27 17:32:46] Carte détectée
-[2025-11-27 17:32:51] Carte détectée
-[2025-11-27 17:32:56] Carte détectée
-[2025-11-27 17:33:01] Carte détectée
-[2025-11-27 17:33:06] Carte détectée
-[2025-11-27 17:33:11] Carte détectée
-[2025-11-27 17:33:16] Carte détectée
-[2025-11-27 17:33:21] Carte détectée
-[2025-11-27 17:33:26] Carte détectée
-[2025-11-27 17:33:31] Carte détectée
-[2025-11-27 17:33:36] Carte détectée
-[2025-11-27 17:33:41] Carte détectée
+=== Machine à café Lunar White - Log démarré ===
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:15] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:44:22] Carte déconnectée (unpowered)
+[2025-11-28 11:44:32] Carte déconnectée (unpowered)
+[2025-11-28 11:44:32] Carte détectée
+[2025-11-28 11:44:36] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:44:43] Carte déconnectée (unpowered)
+[2025-11-28 11:44:48] Carte déconnectée (unpowered)
+[2025-11-28 11:44:51] Carte déconnectée (unpowered)
+[2025-11-28 11:44:54] Carte détectée
+[2025-11-28 11:44:58] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:45:04] Carte déconnectée (unpowered)
+[2025-11-28 11:45:14] Carte déconnectée (unpowered)
+[2025-11-28 11:45:14] Carte détectée
+[2025-11-28 11:45:19] Carte détectée
+[2025-11-28 11:45:29] Carte déconnectée (unpowered)
+[2025-11-28 11:45:34] Carte déconnectée (unpowered)
+[2025-11-28 11:45:39] Carte déconnectée (unpowered)
+[2025-11-28 11:45:44] Carte déconnectée (unpowered)
+[2025-11-28 11:45:49] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Reader is unavailable.: Reader is unavailable. (0x80100017)
+[2025-11-28 11:45:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:45:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:25] Carte détectée
+[2025-11-28 11:46:28] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:46:31] Carte détectée
+[2025-11-28 11:46:36] Carte détectée
+[2025-11-28 11:46:36] PERSO lue sur la carte: '7654321;Dupont;Alice'
+[2025-11-28 11:46:36] Num_Etudiant brut='7654321' | nettoyé='7654321' | len=7 | hex=37363534333231
+[2025-11-28 11:46:36] Num_Etudiant final utilisé pour la BDD: '07654321'
+[2025-11-28 11:46:36] DEBUG BDD: préparation transaction pour Num_Etudiant='07654321', len=8, hex=3037363534333231, montant=0.20, commentaire='LunarWhite: Cappuccino'
+[2025-11-28 11:46:36] ERREUR BDD Transaction: compte inexistant pour Num_Etudiant='07654321' (INSERT Transactions annulé pour éviter la FK)
+[2025-11-28 11:46:36] ATTENTION: débit carte OK mais transaction NON enregistrée en BDD pour Num_Etudiant='07654321'
+[2025-11-28 11:46:36] ACHAT: Cappuccino - 0.20€ débités - Nouveau solde carte: 0.80€
+[2025-11-28 11:46:47] Carte détectée
+[2025-11-28 11:46:52] Carte détectée
+[2025-11-28 11:46:57] Carte détectée
+[2025-11-28 11:47:02] Carte détectée
+[2025-11-28 11:47:07] Carte détectée
+[2025-11-28 11:47:12] Carte détectée
+[2025-11-28 11:47:17] Carte détectée
+[2025-11-28 11:47:22] Carte détectée
+[2025-11-28 11:47:27] Carte détectée
+[2025-11-28 11:47:32] Carte détectée
+[2025-11-28 11:47:36] PIN vérifié - Solde: 0.80€
+[2025-11-28 11:47:37] Carte détectée
+[2025-11-28 11:47:42] Carte détectée
+[2025-11-28 11:47:47] Carte détectée
+[2025-11-28 11:47:52] Carte détectée
+[2025-11-28 11:47:57] Carte détectée
+[2025-11-28 11:48:02] Carte détectée
+[2025-11-28 11:48:07] Carte détectée
+[2025-11-28 11:48:12] Carte détectée
+[2025-11-28 11:48:17] Carte détectée
+[2025-11-28 11:48:22] Carte détectée
+[2025-11-28 11:48:27] Carte détectée
+[2025-11-28 11:48:32] Carte détectée
+[2025-11-28 11:48:37] Carte détectée
+[2025-11-28 11:48:42] Carte détectée
+[2025-11-28 11:48:47] Carte détectée
+[2025-11-28 11:48:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:48:57] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:02] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:56] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:59] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:02] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:05] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:08] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:11] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:14] Carte détectée
+[2025-11-28 11:57:17] PIN vérifié - Solde: 0.80€
+[2025-11-28 11:57:19] Carte détectée
+[2025-11-28 11:57:22] PERSO lue sur la carte: '87654321;Dupont;Alice'
+[2025-11-28 11:57:22] Num_Etudiant brut='87654321' | len=8 | hex=3837363534333231
+[2025-11-28 11:57:22] Num_Etudiant final utilisé pour la BDD: '87654321' | len=8 | hex=3837363534333231
+[2025-11-28 11:57:22] DEBUG BDD: préparation transaction pour Num_Etudiant='87654321', len=8, hex=3837363534333231, montant=0.20, commentaire='LunarWhite: Café', compte_existant=1
+[2025-11-28 11:57:22] BDD: DEBIT 0.20 € enregistré pour 87654321 - LunarWhite: Café
+[2025-11-28 11:57:22] ACHAT: Café - 0.20€ débités - Nouveau solde carte: 0.60€
+[2025-11-28 11:57:29] Carte détectée
+[2025-11-28 11:57:32] Carte détectée
+[2025-11-28 11:57:38] Carte détectée
+[2025-11-28 11:57:43] Carte détectée
+[2025-11-28 11:57:48] Carte détectée
+[2025-11-28 11:57:53] Carte détectée
+[2025-11-28 11:57:58] Carte détectée
+[2025-11-28 11:58:03] Carte détectée
+[2025-11-28 11:58:08] Carte détectée
+[2025-11-28 11:58:13] Carte détectée
+[2025-11-28 11:58:18] Carte détectée
+[2025-11-28 11:58:23] Carte détectée
+                                       [2025-11-28 13:22:44] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:47] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:50] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:53] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:56] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:59] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:02] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:05] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:08] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:11] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:14] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:17] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:20] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:23] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:26] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:29] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:33] Carte déconnectée (unpowered)
+[2025-11-28 13:23:35] Carte déconnectée (unpowered)
+[2025-11-28 13:23:38] Carte détectée
+[2025-11-28 13:23:43] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
+[2025-11-28 13:23:48] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
+[2025-11-28 13:23:55] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
+[2025-11-28 13:23:59] Carte détectée
+[2025-11-28 13:24:01] PIN vérifié - Solde: 0.60€
+[2025-11-28 13:24:04] Carte détectée
+[2025-11-28 13:24:09] PERSO lue sur la carte: '87654321;Dupont;Alice'
+[2025-11-28 13:24:09] Num_Etudiant brut='87654321' | len=8 | hex=3837363534333231
+[2025-11-28 13:24:09] Num_Etudiant final utilisé pour la BDD: '87654321' | len=8 | hex=3837363534333231
+[2025-11-28 13:24:09] DEBUG BDD: préparation transaction pour Num_Etudiant='87654321', len=8, hex=3837363534333231, montant=0.20, commentaire='LunarWhite: Café', compte_existant=1
+[2025-11-28 13:24:09] BDD: DEBIT 0.20 € enregistré pour 87654321 - LunarWhite: Café
+[2025-11-28 13:24:09] ACHAT: Café - 0.20€ débités - Nouveau solde carte: 0.40€
+[2025-11-28 13:24:14] Carte détectée
+[2025-11-28 13:24:19] Carte détectée
+[2025-11-28 13:24:25] Carte détectée
+[2025-11-28 13:24:29] Carte déconnectée (unpowered)
+[2025-11-28 13:24:35] Carte déconnectée (unpowered)
+[2025-11-28 13:24:38] Carte déconnectée (unpowered)
+[2025-11-28 13:24:41] Carte déconnectée (unpowered)
+[2025-11-28 13:24:44] Carte déconnectée (unpowered)
+[2025-11-28 13:24:47] Carte déconnectée (unpowered)
+[2025-11-28 13:24:50] Carte déconnectée (unpowered)
+[2025-11-28 13:24:53] Carte déconnectée (unpowered)
+[2025-11-28 13:24:56] Carte déconnectée (unpowered)
+[2025-11-28 13:24:59] Carte déconnectée (unpowered)
+[2025-11-28 13:25:02] Carte déconnectée (unpowered)
+[2025-11-28 13:25:05] Carte déconnectée (unpowered)
+[2025-11-28 13:25:08] Carte déconnectée (unpowered)
+[2025-11-28 13:25:11] Carte déconnectée (unpowered)
+[2025-11-28 13:25:14] Carte déconnectée (unpowered)
+[2025-11-28 13:25:17] Carte déconnectée (unpowered)
+[2025-11-28 13:25:20] Carte déconnectée (unpowered)
+[2025-11-28 13:25:23] Carte déconnectée (unpowered)
+[2025-11-28 13:25:26] Carte déconnectée (unpowered)
+[2025-11-28 13:25:29] Carte déconnectée (unpowered)
+[2025-11-28 13:25:32] Carte déconnectée (unpowered)
+[2025-11-28 13:25:35] Carte déconnectée (unpowered)
+[2025-11-28 13:25:38] Carte déconnectée (unpowered)
+[2025-11-28 13:25:41] Carte déconnectée (unpowered)
+[2025-11-28 13:25:44] Carte déconnectée (unpowered)
+[2025-11-28 13:25:47] Carte déconnectée (unpowered)
+[2025-11-28 13:25:50] Carte déconnectée (unpowered)
+[2025-11-28 13:25:53] Carte déconnectée (unpowered)
+[2025-11-28 13:25:56] Carte déconnectée (unpowered)
+[2025-11-28 13:25:59] Carte déconnectée (unpowered)
+[2025-11-28 13:26:02] Carte déconnectée (unpowered)
