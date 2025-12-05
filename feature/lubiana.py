@@ -355,9 +355,9 @@ def assign_inital_sold():
         print("[ERREUR] Échec lors de la mise du solde initial.\n")
 
 
-# =========================
+# ================================
 #  FONCTION 5 - consultation solde
-# =========================
+# ================================
 
 def read_sold():
     """
