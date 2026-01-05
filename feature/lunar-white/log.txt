@@ -1,0 +1,327 @@
+=== Machine à café Lunar White - Log démarré ===
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:12] Carte détectée
+[2025-11-28 11:44:15] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:44:22] Carte déconnectée (unpowered)
+[2025-11-28 11:44:32] Carte déconnectée (unpowered)
+[2025-11-28 11:44:32] Carte détectée
+[2025-11-28 11:44:36] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:44:43] Carte déconnectée (unpowered)
+[2025-11-28 11:44:48] Carte déconnectée (unpowered)
+[2025-11-28 11:44:51] Carte déconnectée (unpowered)
+[2025-11-28 11:44:54] Carte détectée
+[2025-11-28 11:44:58] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:45:04] Carte déconnectée (unpowered)
+[2025-11-28 11:45:14] Carte déconnectée (unpowered)
+[2025-11-28 11:45:14] Carte détectée
+[2025-11-28 11:45:19] Carte détectée
+[2025-11-28 11:45:29] Carte déconnectée (unpowered)
+[2025-11-28 11:45:34] Carte déconnectée (unpowered)
+[2025-11-28 11:45:39] Carte déconnectée (unpowered)
+[2025-11-28 11:45:44] Carte déconnectée (unpowered)
+[2025-11-28 11:45:49] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] Carte déconnectée (unpowered)
+[2025-11-28 11:45:52] ERREUR: Erreur de connexion: Unable to connect with protocol: T0 or T1. Reader is unavailable.: Reader is unavailable. (0x80100017)
+[2025-11-28 11:45:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:45:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:46:25] Carte détectée
+[2025-11-28 11:46:28] PIN vérifié - Solde: 1.00€
+[2025-11-28 11:46:31] Carte détectée
+[2025-11-28 11:46:36] Carte détectée
+[2025-11-28 11:46:36] PERSO lue sur la carte: '7654321;Dupont;Alice'
+[2025-11-28 11:46:36] Num_Etudiant brut='7654321' | nettoyé='7654321' | len=7 | hex=37363534333231
+[2025-11-28 11:46:36] Num_Etudiant final utilisé pour la BDD: '07654321'
+[2025-11-28 11:46:36] DEBUG BDD: préparation transaction pour Num_Etudiant='07654321', len=8, hex=3037363534333231, montant=0.20, commentaire='LunarWhite: Cappuccino'
+[2025-11-28 11:46:36] ERREUR BDD Transaction: compte inexistant pour Num_Etudiant='07654321' (INSERT Transactions annulé pour éviter la FK)
+[2025-11-28 11:46:36] ATTENTION: débit carte OK mais transaction NON enregistrée en BDD pour Num_Etudiant='07654321'
+[2025-11-28 11:46:36] ACHAT: Cappuccino - 0.20€ débités - Nouveau solde carte: 0.80€
+[2025-11-28 11:46:47] Carte détectée
+[2025-11-28 11:46:52] Carte détectée
+[2025-11-28 11:46:57] Carte détectée
+[2025-11-28 11:47:02] Carte détectée
+[2025-11-28 11:47:07] Carte détectée
+[2025-11-28 11:47:12] Carte détectée
+[2025-11-28 11:47:17] Carte détectée
+[2025-11-28 11:47:22] Carte détectée
+[2025-11-28 11:47:27] Carte détectée
+[2025-11-28 11:47:32] Carte détectée
+[2025-11-28 11:47:36] PIN vérifié - Solde: 0.80€
+[2025-11-28 11:47:37] Carte détectée
+[2025-11-28 11:47:42] Carte détectée
+[2025-11-28 11:47:47] Carte détectée
+[2025-11-28 11:47:52] Carte détectée
+[2025-11-28 11:47:57] Carte détectée
+[2025-11-28 11:48:02] Carte détectée
+[2025-11-28 11:48:07] Carte détectée
+[2025-11-28 11:48:12] Carte détectée
+[2025-11-28 11:48:17] Carte détectée
+[2025-11-28 11:48:22] Carte détectée
+[2025-11-28 11:48:27] Carte détectée
+[2025-11-28 11:48:32] Carte détectée
+[2025-11-28 11:48:37] Carte détectée
+[2025-11-28 11:48:42] Carte détectée
+[2025-11-28 11:48:47] Carte détectée
+[2025-11-28 11:48:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:48:57] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:02] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:49:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:50:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:51:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:52:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:53:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:54:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:55] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:55:58] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:01] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:04] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:07] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:10] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:13] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:16] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:19] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:22] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:25] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:28] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:31] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:34] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:37] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:40] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:43] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:46] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:49] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:52] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:56] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:56:59] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:02] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:05] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:08] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:11] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 11:57:14] Carte détectée
+[2025-11-28 11:57:17] PIN vérifié - Solde: 0.80€
+[2025-11-28 11:57:19] Carte détectée
+[2025-11-28 11:57:22] PERSO lue sur la carte: '87654321;Dupont;Alice'
+[2025-11-28 11:57:22] Num_Etudiant brut='87654321' | len=8 | hex=3837363534333231
+[2025-11-28 11:57:22] Num_Etudiant final utilisé pour la BDD: '87654321' | len=8 | hex=3837363534333231
+[2025-11-28 11:57:22] DEBUG BDD: préparation transaction pour Num_Etudiant='87654321', len=8, hex=3837363534333231, montant=0.20, commentaire='LunarWhite: Café', compte_existant=1
+[2025-11-28 11:57:22] BDD: DEBIT 0.20 € enregistré pour 87654321 - LunarWhite: Café
+[2025-11-28 11:57:22] ACHAT: Café - 0.20€ débités - Nouveau solde carte: 0.60€
+[2025-11-28 11:57:29] Carte détectée
+[2025-11-28 11:57:32] Carte détectée
+[2025-11-28 11:57:38] Carte détectée
+[2025-11-28 11:57:43] Carte détectée
+[2025-11-28 11:57:48] Carte détectée
+[2025-11-28 11:57:53] Carte détectée
+[2025-11-28 11:57:58] Carte détectée
+[2025-11-28 11:58:03] Carte détectée
+[2025-11-28 11:58:08] Carte détectée
+[2025-11-28 11:58:13] Carte détectée
+[2025-11-28 11:58:18] Carte détectée
+[2025-11-28 11:58:23] Carte détectée
+                                       [2025-11-28 13:22:44] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:47] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:50] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:53] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:56] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:22:59] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:02] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:05] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:08] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:11] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:14] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:17] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:20] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:23] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:26] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:29] ERREUR: Aucun lecteur de carte détecté
+[2025-11-28 13:23:33] Carte déconnectée (unpowered)
+[2025-11-28 13:23:35] Carte déconnectée (unpowered)
+[2025-11-28 13:23:38] Carte détectée
+[2025-11-28 13:23:43] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
+[2025-11-28 13:23:48] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
+[2025-11-28 13:23:55] ERREUR: Erreur de connexion: Unable to connect: No smart card inserted. (0x8010000C)
+[2025-11-28 13:23:59] Carte détectée
+[2025-11-28 13:24:01] PIN vérifié - Solde: 0.60€
+[2025-11-28 13:24:04] Carte détectée
+[2025-11-28 13:24:09] PERSO lue sur la carte: '87654321;Dupont;Alice'
+[2025-11-28 13:24:09] Num_Etudiant brut='87654321' | len=8 | hex=3837363534333231
+[2025-11-28 13:24:09] Num_Etudiant final utilisé pour la BDD: '87654321' | len=8 | hex=3837363534333231
+[2025-11-28 13:24:09] DEBUG BDD: préparation transaction pour Num_Etudiant='87654321', len=8, hex=3837363534333231, montant=0.20, commentaire='LunarWhite: Café', compte_existant=1
+[2025-11-28 13:24:09] BDD: DEBIT 0.20 € enregistré pour 87654321 - LunarWhite: Café
+[2025-11-28 13:24:09] ACHAT: Café - 0.20€ débités - Nouveau solde carte: 0.40€
+[2025-11-28 13:24:14] Carte détectée
+[2025-11-28 13:24:19] Carte détectée
+[2025-11-28 13:24:25] Carte détectée
+[2025-11-28 13:24:29] Carte déconnectée (unpowered)
+[2025-11-28 13:24:35] Carte déconnectée (unpowered)
+[2025-11-28 13:24:38] Carte déconnectée (unpowered)
+[2025-11-28 13:24:41] Carte déconnectée (unpowered)
+[2025-11-28 13:24:44] Carte déconnectée (unpowered)
+[2025-11-28 13:24:47] Carte déconnectée (unpowered)
+[2025-11-28 13:24:50] Carte déconnectée (unpowered)
+[2025-11-28 13:24:53] Carte déconnectée (unpowered)
+[2025-11-28 13:24:56] Carte déconnectée (unpowered)
+[2025-11-28 13:24:59] Carte déconnectée (unpowered)
+[2025-11-28 13:25:02] Carte déconnectée (unpowered)
+[2025-11-28 13:25:05] Carte déconnectée (unpowered)
+[2025-11-28 13:25:08] Carte déconnectée (unpowered)
+[2025-11-28 13:25:11] Carte déconnectée (unpowered)
+[2025-11-28 13:25:14] Carte déconnectée (unpowered)
+[2025-11-28 13:25:17] Carte déconnectée (unpowered)
+[2025-11-28 13:25:20] Carte déconnectée (unpowered)
+[2025-11-28 13:25:23] Carte déconnectée (unpowered)
+[2025-11-28 13:25:26] Carte déconnectée (unpowered)
+[2025-11-28 13:25:29] Carte déconnectée (unpowered)
+[2025-11-28 13:25:32] Carte déconnectée (unpowered)
+[2025-11-28 13:25:35] Carte déconnectée (unpowered)
+[2025-11-28 13:25:38] Carte déconnectée (unpowered)
+[2025-11-28 13:25:41] Carte déconnectée (unpowered)
+[2025-11-28 13:25:44] Carte déconnectée (unpowered)
+[2025-11-28 13:25:47] Carte déconnectée (unpowered)
+[2025-11-28 13:25:50] Carte déconnectée (unpowered)
+[2025-11-28 13:25:53] Carte déconnectée (unpowered)
+[2025-11-28 13:25:56] Carte déconnectée (unpowered)
+[2025-11-28 13:25:59] Carte déconnectée (unpowered)
+[2025-11-28 13:26:02] Carte déconnectée (unpowered)
