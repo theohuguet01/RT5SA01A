@@ -6,6 +6,24 @@ conn_reader = None
 
 
 # =========================
+#  OUTILS AFFICHAGE
+# =========================
+
+def _hex_bytes(data):
+    """Affiche une liste d'octets sous forme '0xAA 0xBB ...'"""
+    if not data:
+        return "(vide)"
+    return " ".join(f"0x{b:02X}" for b in data)
+
+
+def _print_sw(sw1, sw2, prefix=""):
+    if prefix:
+        print(f"{prefix}SW1=0x{sw1:02X}, SW2=0x{sw2:02X}")
+    else:
+        print(f"SW1=0x{sw1:02X}, SW2=0x{sw2:02X}")
+
+
+# =========================
 #  INIT SMART CARD
 # =========================
 
@@ -26,7 +44,7 @@ def init_smart_card():
         conn_reader.connect()
         print("==============================================")
         print("  Lecteur initialisé avec succès")
-        print("  ATR : ", scardutil.toHexString(conn_reader.getATR()))
+        print("  ATR :", scardutil.toHexString(conn_reader.getATR()))
         print("==============================================\n")
     except scardexcp.NoCardException as e:
         print("[ERREUR] Aucune carte dans le lecteur : ", e)
@@ -61,7 +79,6 @@ def print_menu():
 # =========================
 
 def print_version():
-    # Version : CLA=0x81, INS=0x00, P3=4 (taille de "2.00")
     apdu = [0x81, 0x00, 0x00, 0x00, 0x04]
 
     try:
@@ -70,7 +87,6 @@ def print_version():
         print("[ERREUR] Lecture de la version de la carte :", e)
         return
 
-    # si taille incorrecte, la carte renvoie 6C xx
     if sw1 == 0x6C:
         apdu[4] = sw2
         try:
@@ -80,14 +96,15 @@ def print_version():
             return
 
     if sw1 != 0x90 or sw2 != 0x00:
-        print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+        _print_sw(sw1, sw2)
         print("[ERREUR] Impossible de lire la version de la carte.\n")
         return
 
     s = "".join(chr(e) for e in data)
     print("\n=== Version de la carte ===")
-    print("  Version : %s" % s)
-    print("  (SW1=0x%02X, SW2=0x%02X)\n" % (sw1, sw2))
+    print(f"  Version : {s}")
+    _print_sw(sw1, sw2, prefix="  ")
+    print()
 
 
 # ===========================
@@ -95,10 +112,6 @@ def print_version():
 # ===========================
 
 def print_data():
-    """
-    Affiche les données de personnalisation (perso).
-    Si la carte n’est pas attribuée (taille 0) → message explicite.
-    """
     apdu = [0x81, 0x02, 0x00, 0x00, 0x05]
     try:
         data, sw1, sw2 = conn_reader.transmit(apdu)
@@ -115,18 +128,15 @@ def print_data():
             return
 
     if sw1 != 0x90 or sw2 != 0x00:
-        print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+        _print_sw(sw1, sw2)
         print("[ERREUR] Impossible de lire les données de la carte.\n")
         return
 
-    # ICI LA CORRECTION : on ne jette plus le premier octet
-    if data:
-        perso_bytes = data[:]      # tout le buffer
-    else:
-        perso_bytes = []
+    # IMPORTANT: on ne jette PAS le premier octet (dans votre cas la perso commence directement)
+    perso_bytes = data[:] if data else []
 
     print("\n=== Données de la carte ===")
-    print("  (SW1=0x%02X, SW2=0x%02X)" % (sw1, sw2))
+    _print_sw(sw1, sw2, prefix="  ")
 
     if not perso_bytes:
         print("  Carte non attribuée : aucune donnée de personnalisation.\n")
@@ -139,10 +149,10 @@ def print_data():
     nom = parts[1].strip() if len(parts) > 1 else ""
     prenom = parts[2].strip() if len(parts) > 2 else ""
 
-    print("  Numéro étudiant        : %s" % (num or "(inconnu)"))
-    print("  Nom de l'étudiant(e)   : %s" % (nom or "(inconnu)"))
-    print("  Prénom de l'étudiant(e): %s\n" % (prenom or "(inconnu)"))
-
+    print("  Numéro étudiant        :", num or "(inconnu)")
+    print("  Nom de l'étudiant(e)   :", nom or "(inconnu)")
+    print("  Prénom de l'étudiant(e):", prenom or "(inconnu)")
+    print()
 
 
 # =========================
@@ -151,12 +161,11 @@ def print_data():
 
 def assign_card():
     print("\n=== Attribution / personnalisation de la carte ===")
-    # intro_perso() : APDU 81 01 00 00 Lc [perso]
     apdu = [0x81, 0x01, 0x00, 0x00]
 
-    num = input("  Numéro d'étudiant : ")
-    nom = input("  Nom               : ")
-    prenom = input("  Prénom            : ")
+    num = input("  Numéro d'étudiant : ").strip()
+    nom = input("  Nom               : ").strip()
+    prenom = input("  Prénom            : ").strip()
 
     infos = f"{num};{nom};{prenom}"
     length = len(infos)
@@ -175,11 +184,11 @@ def assign_card():
         print("[ERREUR] Personnalisation de la carte :", e)
         return
 
-    print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+    _print_sw(sw1, sw2)
     if sw1 == 0x90 and sw2 == 0x00:
         print("[OK] Carte personnalisée avec succès.\n")
     elif sw1 == 0x6C:
-        print("[ERREUR] Taille incorrecte, la carte attend %d octets.\n" % sw2)
+        print(f"[ERREUR] Taille incorrecte, la carte attend {sw2} octets.\n")
     else:
         print("[ERREUR] Échec de la personnalisation de la carte.\n")
 
@@ -189,10 +198,6 @@ def assign_card():
 # =========================
 
 def _ask_pin_octets(message):
-    """
-    Demande un PIN sur 4 chiffres collés, ex: 1234
-    Renvoie une liste de 4 entiers [b0, b1, b2, b3].
-    """
     while True:
         raw = input(message + " (4 chiffres, ex: 1234) : ").strip()
         if len(raw) != 4 or not raw.isdigit():
@@ -202,10 +207,6 @@ def _ask_pin_octets(message):
 
 
 def verify_pin_interactive():
-    """
-    Vérifie le PIN auprès de la carte.
-    APDU : 82 04 00 00 04 [PIN(4 octets)]
-    """
     print("\n=== Vérification du code PIN ===")
     pin_bytes = _ask_pin_octets("  PIN")
     apdu = [0x82, 0x04, 0x00, 0x00, 0x04] + pin_bytes
@@ -216,29 +217,28 @@ def verify_pin_interactive():
         print("[ERREUR] Vérification du PIN :", e)
         return False
 
-    print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+    _print_sw(sw1, sw2)
     if sw1 == 0x90 and sw2 == 0x00:
-        print("[OK] PIN correct, authentification réussie.\n")
+        print("[OK] PIN correct.\n")
         return True
     elif sw1 == 0x63:
-        print("[ERREUR] PIN incorrect. Essais restants : %d\n" % sw2)
+        print(f"[ERREUR] PIN incorrect. Essais restants : {sw2}\n")
         return False
     elif sw1 == 0x69 and sw2 == 0x83:
         print("[ERREUR] PIN bloqué (plus d'essais).\n")
         return False
     elif sw1 == 0x6C:
-        print("[ERREUR] Longueur PIN incorrecte, la carte attend %d octets.\n" % sw2)
+        print(f"[ERREUR] Longueur PIN incorrecte, la carte attend {sw2} octets.\n")
         return False
     else:
         print("[ERREUR] Échec lors de la vérification du PIN.\n")
         return False
 
 
-def read_counter():
+def read_counter_with_response(label=""):
     """
-    Lecture du compteur anti-rejoue.
-    APDU : 82 07 00 00 02
-    Renvoie le compteur (int) ou None.
+    Lecture compteur anti-rejoue + affichage complet DATA + SW.
+    Retourne (ctr:int|None).
     """
     apdu = [0x82, 0x07, 0x00, 0x00, 0x02]
     try:
@@ -247,134 +247,126 @@ def read_counter():
         print("[ERREUR] Lecture du compteur :", e)
         return None
 
-    print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+    tag = f"{label} " if label else ""
+    print(f"{tag}Compteur -> DATA={_hex_bytes(data)} | SW1=0x{sw1:02X}, SW2=0x{sw2:02X}")
+
     if sw1 != 0x90 or sw2 != 0x00 or not data or len(data) < 2:
         print("[ERREUR] Impossible de lire le compteur.\n")
         return None
 
     ctr = int(data[0]) | (int(data[1]) << 8)
-    print("Compteur actuel : %d\n" % ctr)
     return ctr
 
 
 def _read_sold_core():
-    """
-    Lecture basse-niveau du solde, en supposant que le PIN vient
-    d’être vérifié côté carte (pin_ok=1).
-    APDU : 82 01 00 00 02
-    Retourne le solde en centimes (int) ou None.
-    """
     apdu = [0x82, 0x01, 0x00, 0x00, 0x02]
     try:
         data, sw1, sw2 = conn_reader.transmit(apdu)
     except scardexcp.CardConnectionException as e:
-        print("[ERREUR] Lecture du solde (basse-niveau) :", e)
+        print("[ERREUR] Lecture du solde :", e)
         return None
 
-    print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+    _print_sw(sw1, sw2)
     if sw1 != 0x90 or sw2 != 0x00:
         if sw1 == 0x69 and sw2 == 0x82:
-            print("[ERREUR] PIN non vérifié (security status not satisfied).\n")
+            print("[ERREUR] PIN non vérifié.\n")
         else:
             print("[ERREUR] Erreur lors de la lecture du solde.\n")
         return None
 
     if not data or len(data) < 2:
-        print("[ERREUR] Données de solde invalides ou manquantes.\n")
+        print("[ERREUR] Données de solde invalides.\n")
         return None
 
-    cents = int(data[0]) | (int(data[1]) << 8)
-    return cents
+    return int(data[0]) | (int(data[1]) << 8)
 
 
 # =========================
-#  FONCTION 4 - solde initial
+#  FONCTION 4 - solde initial + TEST anti-rejoue
 # =========================
 
 def assign_inital_sold():
-    """
-    Créditer 1.00 € sur la carte, seulement si solde actuel = 0.
-    """
     print("\n=== Mise du solde initial à 1.00 € ===")
 
-    print("[Étape 1] Vérification du PIN pour lecture du solde...")
+    print("[1/3] Vérification du PIN pour lire le solde...")
     if not verify_pin_interactive():
-        print("[ERREUR] Impossible de vérifier le solde : PIN non vérifié.\n")
+        print("[ERREUR] PIN non vérifié.\n")
         return
 
     cents = _read_sold_core()
     if cents is None:
-        print("[ERREUR] Impossible de vérifier si la carte a déjà un solde.\n")
         return
 
     if cents > 0:
-        euros = cents / 100.0
-        print("[INFO] Carte déjà initialisée, solde actuel = %.2f €." % euros)
-        print("       Crédit initial non appliqué.\n")
+        print(f"[INFO] Solde actuel : {cents/100.0:.2f} € -> pas de crédit initial.\n")
         return
 
-    print("[OK] Solde actuel = 0.00 €, initialisation possible.\n")
+    print("[OK] Solde = 0.00 € -> crédit initial autorisé.\n")
 
-    print("[Étape 2] Vérification du PIN pour le crédit initial...")
+    print("[2/3] Vérification du PIN pour le crédit...")
     if not verify_pin_interactive():
-        print("[ERREUR] Impossible de créditer : PIN non vérifié.\n")
+        print("[ERREUR] PIN non vérifié.\n")
         return
 
-    ctr = read_counter()
-    if ctr is None:
-        print("[ERREUR] Impossible de créditer : compteur indisponible.\n")
+    print("\n--- Test anti-rejoue : compteur AVANT / APRÈS crédit ---")
+    ctr_before = read_counter_with_response(label="AVANT")
+    if ctr_before is None:
+        print("[ERREUR] Compteur indisponible, crédit annulé.\n")
         return
 
-    montant = 100
+    montant = 100  # centimes
     montant_lsb = montant & 0xFF
     montant_msb = (montant >> 8) & 0xFF
 
-    p1 = ctr & 0xFF
-    p2 = (ctr >> 8) & 0xFF
+    p1 = ctr_before & 0xFF
+    p2 = (ctr_before >> 8) & 0xFF
 
-    apdu = [0x82, 0x02, p1, p2, 0x02, montant_lsb, montant_msb]
+    apdu_credit = [0x82, 0x02, p1, p2, 0x02, montant_lsb, montant_msb]
 
     try:
-        data, sw1, sw2 = conn_reader.transmit(apdu)
+        data, sw1, sw2 = conn_reader.transmit(apdu_credit)
     except scardexcp.CardConnectionException as e:
-        print("[ERREUR] Crédit du solde initial :", e)
+        print("[ERREUR] Crédit :", e)
         return
 
-    print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+    print(f"CRÉDIT -> SW1=0x{sw1:02X}, SW2=0x{sw2:02X}")
+
+    # Lecture compteur après l'opération, pour comparaison (même si le crédit échoue)
+    ctr_after = read_counter_with_response(label="APRES")
+    if ctr_after is not None:
+        print(f"Comparaison compteur : AVANT={ctr_before} | APRES={ctr_after}\n")
+    else:
+        print("Comparaison compteur : impossible de relire le compteur après.\n")
+
     if sw1 == 0x90 and sw2 == 0x00:
         print("[OK] Solde initial crédité : 1.00 €\n")
     elif sw1 == 0x61 and sw2 == 0x00:
-        print("[ERREUR] Capacité maximale de rechargement dépassée.\n")
+        print("[ERREUR] Capacité maximale dépassée.\n")
     elif sw1 == 0x69 and sw2 == 0x82:
-        print("[ERREUR] Statut de sécurité non satisfait (PIN non vérifié).\n")
+        print("[ERREUR] Statut de sécurité non satisfait (PIN non vérifié côté carte).\n")
     elif sw1 == 0x69 and sw2 == 0x84:
-        print("[ERREUR] Erreur anti-rejoue (compteur invalide).\n")
+        print("[ERREUR] Anti-rejoue : compteur invalide (opération rejetée).\n")
     elif sw1 == 0x6C:
-        print("[ERREUR] Erreur de longueur (la carte attend %d octets).\n" % sw2)
+        print(f"[ERREUR] Longueur incorrecte (attendu {sw2} octets).\n")
     else:
-        print("[ERREUR] Échec lors de la mise du solde initial.\n")
+        print("[ERREUR] Échec crédit initial.\n")
 
 
-# ================================
+# =========================
 #  FONCTION 5 - consultation solde
-# ================================
+# =========================
 
 def read_sold():
-    """
-    Consultation du solde : on vérifie le PIN à chaque fois,
-    puis on lit le solde via _read_sold_core().
-    """
     print("\n=== Consultation du solde ===")
     if not verify_pin_interactive():
-        print("[ERREUR] Impossible de lire le solde : PIN non vérifié.\n")
+        print("[ERREUR] PIN non vérifié.\n")
         return
 
     cents = _read_sold_core()
     if cents is None:
         return
 
-    euros = cents / 100.0
-    print("[OK] Solde disponible : %.2f €\n" % euros)
+    print(f"[OK] Solde disponible : {cents/100.0:.2f} €\n")
 
 
 # =========================
@@ -382,17 +374,11 @@ def read_sold():
 # =========================
 
 def change_pin():
-    """
-    Changer le code PIN :
-    APDU : 82 05 00 00 08 [ancien PIN(4)][nouveau PIN(4)]
-    """
     print("\n=== Changement de PIN ===")
     old_pin = _ask_pin_octets("  Ancien PIN")
     new_pin = _ask_pin_octets("  Nouveau PIN")
 
-    apdu = [0x82, 0x05, 0x00, 0x00, 0x08]
-    apdu.extend(old_pin)
-    apdu.extend(new_pin)
+    apdu = [0x82, 0x05, 0x00, 0x00, 0x08] + old_pin + new_pin
 
     try:
         data, sw1, sw2 = conn_reader.transmit(apdu)
@@ -400,17 +386,15 @@ def change_pin():
         print("[ERREUR] Changement de PIN :", e)
         return
 
-    print("SW1=0x%02X, SW2=0x%02X" % (sw1, sw2))
+    _print_sw(sw1, sw2)
     if sw1 == 0x90 and sw2 == 0x00:
         print("[OK] PIN changé avec succès.\n")
-    elif sw1 == 0x6C and sw2 == 0x08:
-        print("[ERREUR] Erreur de longueur (P3 doit être 8).\n")
     elif sw1 == 0x63:
-        print("[ERREUR] Ancien PIN incorrect. Essais restants : %d\n" % sw2)
+        print(f"[ERREUR] Ancien PIN incorrect. Essais restants : {sw2}\n")
     elif sw1 == 0x69 and sw2 == 0x83:
-        print("[ERREUR] PIN bloqué (plus d'essais).\n")
+        print("[ERREUR] PIN bloqué.\n")
     else:
-        print("[ERREUR] Échec lors du changement de PIN.\n")
+        print("[ERREUR] Échec changement de PIN.\n")
 
 
 # =========================
@@ -420,10 +404,11 @@ def change_pin():
 def main():
     init_smart_card()
     print_hello_message()
+
     while True:
         print_menu()
         try:
-            cmd = int(input("Choix : "))
+            cmd = int(input("Choix : ").strip())
         except ValueError:
             print("[WARN] Veuillez saisir un nombre.\n")
             continue
