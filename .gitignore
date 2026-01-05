@@ -3,6 +3,10 @@
 .env.local
 .env.*.local
 
+# --- FICHIERS DE COURS ---
+*.pdf
+cours/
+
 # --- C / C++ ---
 *.o
 *.out
