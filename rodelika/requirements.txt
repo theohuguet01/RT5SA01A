@@ -1,0 +1,4 @@
+click
+Flask
+mysql-connector-python
+bcrypt
