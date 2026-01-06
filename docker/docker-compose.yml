@@ -1,0 +1,313 @@
+services:
+  # ============================================================
+  # Reverse proxy Traefik
+  # ============================================================
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    command:
+      - "--api.dashboard=true"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - traefik_proxy
+
+  # ============================================================
+  # PC/SC daemon (accès lecteur carte à puce USB)
+  # ============================================================
+  pcscd:
+    image: debian:stable-slim
+    container_name: pcscd
+    privileged: true
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+    volumes:
+      - pcscd_socket:/run/pcscd
+    networks:
+      - db_net
+    restart: unless-stopped
+    command:
+      [
+        "/bin/sh",
+        "-lc",
+        "apt-get update \
+        && apt-get install -y --no-install-recommends pcscd libccid pcsc-tools \
+        && rm -rf /var/lib/apt/lists/* \
+        && rm -f /run/pcscd/pcscd.comm \
+        && exec pcscd --foreground --disable-polkit --debug --apdu"
+      ]
+
+  # ============================================================
+  # Rubrovitamin - Programmation des cartes avec Arduino ISP
+  # ============================================================
+  rubrovitamin:
+    image: debian:stable-slim
+    container_name: rubrovitamin
+    command:
+      [
+        "/bin/sh",
+        "-c",
+        "apt-get update && apt-get install -y --no-install-recommends gcc-avr avr-libc avrdude make usbutils && rm -rf /var/lib/apt/lists/* && tail -f /dev/null"
+      ]
+    privileged: true
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+      - "/dev/ttyACM0:/dev/ttyACM0"
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    volumes:
+      - ./rubrovitamin:/app
+    working_dir: /app
+    networks:
+      - db_net
+    restart: unless-stopped
+
+  # ============================================================
+  # MySQL
+  # ============================================================
+  purple-dragon-db:
+    image: mysql:8.3
+    container_name: purple-dragon-db
+    environment:
+      MYSQL_DATABASE: carote_electronique
+      MYSQL_USER: rodelika
+      MYSQL_PASSWORD: rodelika
+      MYSQL_ROOT_PASSWORD: Velizy78
+      MYSQL_ROOT_HOST: "%"
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+    volumes:
+      - purple_dragon_data:/var/lib/mysql
+      - type: bind
+        source: ./db/carote_electronique.sql
+        target: /docker-entrypoint-initdb.d/001-init.sql
+        read_only: true
+    networks:
+      - db_net
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 50
+      start_period: 60s
+
+  # ============================================================
+  # Rodelika Web
+  # ============================================================
+  rodelika-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rodelika-web
+    environment:
+      SERVICE_NAME: RodelikaWeb
+      FLASK_APP: rodelika_web.py
+      FLASK_RUN_HOST: 0.0.0.0
+      FLASK_RUN_PORT: 5000
+      DB_HOST: purple-dragon-db
+      DB_PORT: 3306
+      DB_USER: rodelika
+      DB_PASSWORD: rodelika
+      DB_NAME: carote_electronique
+      PCSCLITE_CSOCK_NAME: /run/pcscd/pcscd.comm
+    ports:
+      - "8081:5000"
+    volumes:
+      - ./rodelika:/app
+      - pcscd_socket:/run/pcscd
+    depends_on:
+      purple-dragon-db:
+        condition: service_healthy
+      pcscd:
+        condition: service_started
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=docker_traefik_proxy"
+      - "traefik.http.routers.rodelika-web.rule=Host(`rodelika.crous-78.uvsq.fr`)"
+      - "traefik.http.routers.rodelika-web.entrypoints=web"
+      - "traefik.http.services.rodelika-web.loadbalancer.server.port=5000"
+    networks:
+      - traefik_proxy
+      - db_net
+
+  # ============================================================
+  # Berlicum Web
+  # ============================================================
+  berlicum-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: berlicum-web
+    environment:
+      SERVICE_NAME: BerlicumWeb
+      FLASK_APP: berlicum_web.py
+      FLASK_RUN_HOST: 0.0.0.0
+      FLASK_RUN_PORT: 5000
+      DB_HOST: purple-dragon-db
+      DB_PORT: 3306
+      DB_USER: rodelika
+      DB_PASSWORD: rodelika
+      DB_NAME: carote_electronique
+      PCSCLITE_CSOCK_NAME: /run/pcscd/pcscd.comm
+    ports:
+      - "8082:5000"
+    volumes:
+      - ./berlicum:/app
+      - pcscd_socket:/run/pcscd
+    depends_on:
+      purple-dragon-db:
+        condition: service_healthy
+      pcscd:
+        condition: service_started
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=docker_traefik_proxy"
+      - "traefik.http.routers.berlicum-web.rule=Host(`berlicum.crous-78.uvsq.fr`)"
+      - "traefik.http.routers.berlicum-web.entrypoints=web"
+      - "traefik.http.services.berlicum-web.loadbalancer.server.port=5000"
+    networks:
+      - traefik_proxy
+      - db_net
+
+  # ============================================================
+  # Lunar White Web
+  # ============================================================
+  lunar-white:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lunar-white
+    environment:
+      SERVICE_NAME: LunarWhiteWeb
+      FLASK_APP: app.py
+      FLASK_RUN_HOST: 0.0.0.0
+      FLASK_RUN_PORT: 5000
+      DB_HOST: purple-dragon-db
+      DB_PORT: 3306
+      DB_USER: rodelika
+      DB_PASSWORD: rodelika
+      DB_NAME: carote_electronique
+      PCSCLITE_CSOCK_NAME: /run/pcscd/pcscd.comm
+    ports:
+      - "8083:5000"
+    volumes:
+      - ./lunar-white:/app
+      - pcscd_socket:/run/pcscd
+    depends_on:
+      purple-dragon-db:
+        condition: service_healthy
+      pcscd:
+        condition: service_started
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=docker_traefik_proxy"
+      - "traefik.http.routers.lunar-white.rule=Host(`lunarwhite.crous-78.uvsq.fr`)"
+      - "traefik.http.routers.lunar-white.entrypoints=web"
+      - "traefik.http.services.lunar-white.loadbalancer.server.port=5000"
+    networks:
+      - traefik_proxy
+      - db_net
+
+  # ============================================================
+  # CLI - Rodelika
+  # ============================================================
+  rodelika-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rodelika-cli
+    environment:
+      DB_HOST: purple-dragon-db
+      DB_PORT: 3306
+      DB_USER: rodelika
+      DB_PASSWORD: rodelika
+      DB_NAME: carote_electronique
+      PCSCLITE_CSOCK_NAME: /run/pcscd/pcscd.comm
+    volumes:
+      - ./rodelika:/app
+      - pcscd_socket:/run/pcscd
+    depends_on:
+      purple-dragon-db:
+        condition: service_healthy
+      pcscd:
+        condition: service_started
+    networks:
+      - db_net
+    stdin_open: true
+    tty: true
+    command: ["python", "rodelika_cli.py"]
+
+  # ============================================================
+  # CLI - Berlicum
+  # ============================================================
+  berlicum-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: berlicum-cli
+    environment:
+      DB_HOST: purple-dragon-db
+      DB_PORT: 3306
+      DB_USER: rodelika
+      DB_PASSWORD: rodelika
+      DB_NAME: carote_electronique
+      PCSCLITE_CSOCK_NAME: /run/pcscd/pcscd.comm
+    volumes:
+      - ./berlicum:/app
+      - pcscd_socket:/run/pcscd
+    depends_on:
+      purple-dragon-db:
+        condition: service_healthy
+      pcscd:
+        condition: service_started
+    networks:
+      - db_net
+    stdin_open: true
+    tty: true
+    command: ["python", "berlicum.py"]
+
+  # ============================================================
+  # CLI - Lubiana
+  # ============================================================
+  lubiana-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lubiana-cli
+    environment:
+      DB_HOST: purple-dragon-db
+      DB_PORT: 3306
+      DB_USER: rodelika
+      DB_PASSWORD: rodelika
+      DB_NAME: carote_electronique
+      PCSCLITE_CSOCK_NAME: /run/pcscd/pcscd.comm
+    volumes:
+      - ./lubiana:/app
+      - pcscd_socket:/run/pcscd
+    depends_on:
+      purple-dragon-db:
+        condition: service_healthy
+      pcscd:
+        condition: service_started
+    networks:
+      - db_net
+    stdin_open: true
+    tty: true
+    command: ["python", "lubiana.py"]
+
+networks:
+  traefik_proxy:
+    external: false
+  db_net:
+    external: false
+
+volumes:
+  purple_dragon_data:
+  pcscd_socket:
