@@ -6,7 +6,7 @@
 
 //---------------------
 //
-// Programme bourse.c
+// Programme rubro_v2.c
 //
 //---------------------
 
