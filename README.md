@@ -68,21 +68,6 @@ Un **rapport dédié** doit analyser les vulnérabilités possibles (logicielles
 
 ---
 
-## 🚀 Installation / Dépendances
-### Python
-- `pyscard`  
-- `mysql-connector`
-
-### Node.js (Rodelika Web)
-- `express`  
-- `mysql2`  
-- `vue`  
-
-### Base de données
-- MySQL/MariaDB ≥ 10.5
-
----
-
 ## ✍️ Auteur & Révision
 Projet **La Carotte Électronique**  
 IUT de Vélizy — Département Réseaux & Télécommunications
